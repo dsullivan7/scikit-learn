@@ -146,8 +146,6 @@ cdef class Hinge(Classification):
         When threshold=0.0, one gets the loss used by the Perceptron.
     """
 
-    cdef double threshold
-
     def __init__(self, double threshold=1.0):
         self.threshold = threshold
 

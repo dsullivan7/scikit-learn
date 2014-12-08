@@ -34,6 +34,16 @@ def configuration(parent_package='', top_path=None):
                                                           []),
                          **blas_info)
 
+    config.add_extension('sgd_fast_adaptive',
+                         sources=['sgd_fast_adaptive.c'],
+                         include_dirs=[join('..', 'src', 'cblas'),
+                                       numpy.get_include(),
+                                       blas_info.pop('include_dirs', [])],
+                         libraries=cblas_libs,
+                         extra_compile_args=blas_info.pop('extra_compile_args',
+                                                          []),
+                         **blas_info)
+
     # add other directories
     config.add_subpackage('tests')
 

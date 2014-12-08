@@ -20,6 +20,7 @@ from .coordinate_descent import (Lasso, ElasticNet, LassoCV, ElasticNetCV,
                                  MultiTaskLassoCV)
 from .sgd_fast import Hinge, Log, ModifiedHuber, SquaredLoss, Huber
 from .stochastic_gradient import SGDClassifier, SGDRegressor
+from .adaptive_sgd import AdaptiveSGDClassifier, AdaptiveSGDRegressor
 from .ridge import (Ridge, RidgeCV, RidgeClassifier, RidgeClassifierCV,
                     ridge_regression)
 from .logistic import (LogisticRegression, LogisticRegressionCV,
@@ -34,7 +35,9 @@ from .randomized_l1 import (RandomizedLasso, RandomizedLogisticRegression,
 from .ransac import RANSACRegressor
 from .theil_sen import TheilSenRegressor
 
-__all__ = ['ARDRegression',
+__all__ = ['AdaptiveSGDClassifier',
+           'AdaptiveSGDRegressor',
+           'ARDRegression',
            'BayesianRidge',
            'ElasticNet',
            'ElasticNetCV',
