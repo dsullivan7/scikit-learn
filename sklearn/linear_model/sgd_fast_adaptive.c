@@ -1367,7 +1367,6 @@ static char __pyx_k_y[] = "y";
 static char __pyx_k_Zd[] = "Zd";
 static char __pyx_k_Zf[] = "Zf";
 static char __pyx_k_Zg[] = "Zg";
-static char __pyx_k__7[] = "_";
 static char __pyx_k_np[] = "np";
 static char __pyx_k_end[] = "end";
 static char __pyx_k_eta[] = "eta";
@@ -1465,7 +1464,6 @@ static PyObject *__pyx_n_s_RuntimeError;
 static PyObject *__pyx_kp_s_Total_training_time_2f_seconds;
 static PyObject *__pyx_kp_s_Users_dannysullivan_Documents_C;
 static PyObject *__pyx_n_s_ValueError;
-static PyObject *__pyx_n_s__7;
 static PyObject *__pyx_n_s_accu_grad;
 static PyObject *__pyx_n_s_accu_grad_ptr;
 static PyObject *__pyx_n_s_accu_sq_grad;
@@ -1553,12 +1551,12 @@ static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_tuple__4;
 static PyObject *__pyx_tuple__5;
 static PyObject *__pyx_tuple__6;
-static PyObject *__pyx_tuple__8;
-static PyObject *__pyx_tuple__10;
-static PyObject *__pyx_tuple__12;
-static PyObject *__pyx_codeobj__9;
-static PyObject *__pyx_codeobj__11;
-static PyObject *__pyx_codeobj__13;
+static PyObject *__pyx_tuple__7;
+static PyObject *__pyx_tuple__9;
+static PyObject *__pyx_tuple__11;
+static PyObject *__pyx_codeobj__8;
+static PyObject *__pyx_codeobj__10;
+static PyObject *__pyx_codeobj__12;
 
 /* "sklearn/linear_model/sgd_fast_adaptive.pyx":42
  * 
@@ -1813,7 +1811,6 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_1plain_sgd
 static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_weights, double __pyx_v_intercept, struct __pyx_obj_7sklearn_12linear_model_8sgd_fast_LossFunction *__pyx_v_loss, int __pyx_v_penalty_type, double __pyx_v_alpha, double __pyx_v_C, double __pyx_v_l1_ratio, struct __pyx_obj_7sklearn_5utils_11seq_dataset_SequentialDataset *__pyx_v_dataset, int __pyx_v_n_iter, int __pyx_v_fit_intercept, int __pyx_v_verbose, int __pyx_v_shuffle, __pyx_t_5numpy_uint32_t __pyx_v_seed, double __pyx_v_weight_pos, double __pyx_v_weight_neg, int __pyx_v_learning_rate, double __pyx_v_eta0, double __pyx_v_power_t, double __pyx_v_t, double __pyx_v_intercept_decay) {
   PyObject *__pyx_v_standard_weights = NULL;
   PyObject *__pyx_v_standard_intercept = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v__ = NULL;
   __Pyx_LocalBuf_ND __pyx_pybuffernd_weights;
   __Pyx_Buffer __pyx_pybuffer_weights;
   PyObject *__pyx_r = NULL;
@@ -1855,136 +1852,136 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
   }
   __pyx_pybuffernd_weights.diminfo[0].strides = __pyx_pybuffernd_weights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_weights.diminfo[0].shape = __pyx_pybuffernd_weights.rcbuffer->pybuffer.shape[0];
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":115
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":114
+ *         The fitted intercept term.
  *     """
- *     standard_weights, standard_intercept,\
- *         _, _ = _plain_sgd(weights,             # <<<<<<<<<<<<<<
+ *     standard_weights, standard_intercept = _plain_sgd(weights,             # <<<<<<<<<<<<<<
  *                           intercept,
  *                           None,
  */
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_plain_sgd); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_plain_sgd); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":116
- *     standard_weights, standard_intercept,\
- *         _, _ = _plain_sgd(weights,
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":115
+ *     """
+ *     standard_weights, standard_intercept = _plain_sgd(weights,
  *                           intercept,             # <<<<<<<<<<<<<<
  *                           None,
  *                           0,
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 116; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":120
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":119
  *                           0,
  *                           loss,
  *                           penalty_type,             # <<<<<<<<<<<<<<
  *                           alpha, C,
  *                           l1_ratio,
  */
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_penalty_type); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_penalty_type); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 119; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":121
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":120
  *                           loss,
  *                           penalty_type,
  *                           alpha, C,             # <<<<<<<<<<<<<<
  *                           l1_ratio,
  *                           dataset,
  */
-  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_alpha); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyFloat_FromDouble(__pyx_v_alpha); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_C); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_C); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 120; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":122
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":121
  *                           penalty_type,
  *                           alpha, C,
  *                           l1_ratio,             # <<<<<<<<<<<<<<
  *                           dataset,
  *                           n_iter, fit_intercept,
  */
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_l1_ratio); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 122; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_l1_ratio); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 121; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":124
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":123
  *                           l1_ratio,
  *                           dataset,
  *                           n_iter, fit_intercept,             # <<<<<<<<<<<<<<
  *                           verbose, shuffle, seed,
  *                           weight_pos, weight_neg,
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_n_iter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_n_iter); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_fit_intercept); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_fit_intercept); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 123; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":125
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":124
  *                           dataset,
  *                           n_iter, fit_intercept,
  *                           verbose, shuffle, seed,             # <<<<<<<<<<<<<<
  *                           weight_pos, weight_neg,
  *                           learning_rate, eta0,
  */
-  __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_verbose); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_verbose); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = __Pyx_PyBool_FromLong(__pyx_v_shuffle); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = __Pyx_PyBool_FromLong(__pyx_v_shuffle); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = __Pyx_PyInt_From_npy_uint32(__pyx_v_seed); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = __Pyx_PyInt_From_npy_uint32(__pyx_v_seed); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 124; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":126
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":125
  *                           n_iter, fit_intercept,
  *                           verbose, shuffle, seed,
  *                           weight_pos, weight_neg,             # <<<<<<<<<<<<<<
  *                           learning_rate, eta0,
  *                           power_t,
  */
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_weight_pos); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_weight_pos); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_weight_neg); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_weight_neg); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_14);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":127
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":126
  *                           verbose, shuffle, seed,
  *                           weight_pos, weight_neg,
  *                           learning_rate, eta0,             # <<<<<<<<<<<<<<
  *                           power_t,
  *                           t,
  */
-  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_learning_rate); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_learning_rate); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_16 = PyFloat_FromDouble(__pyx_v_eta0); if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_16 = PyFloat_FromDouble(__pyx_v_eta0); if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_16);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":128
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":127
  *                           weight_pos, weight_neg,
  *                           learning_rate, eta0,
  *                           power_t,             # <<<<<<<<<<<<<<
  *                           t,
  *                           intercept_decay,
  */
-  __pyx_t_17 = PyFloat_FromDouble(__pyx_v_power_t); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_17 = PyFloat_FromDouble(__pyx_v_power_t); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":129
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":128
  *                           learning_rate, eta0,
  *                           power_t,
  *                           t,             # <<<<<<<<<<<<<<
  *                           intercept_decay,
  *                           0)
  */
-  __pyx_t_18 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_18 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 128; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_18);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":130
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":129
  *                           power_t,
  *                           t,
  *                           intercept_decay,             # <<<<<<<<<<<<<<
  *                           0)
  *     return standard_weights, standard_intercept
  */
-  __pyx_t_19 = PyFloat_FromDouble(__pyx_v_intercept_decay); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 130; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_19 = PyFloat_FromDouble(__pyx_v_intercept_decay); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 129; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_19);
   __pyx_t_20 = NULL;
   __pyx_t_21 = 0;
@@ -1998,7 +1995,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
       __pyx_t_21 = 1;
     }
   }
-  __pyx_t_22 = PyTuple_New(23+__pyx_t_21); if (unlikely(!__pyx_t_22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_22 = PyTuple_New(23+__pyx_t_21); if (unlikely(!__pyx_t_22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_22);
   if (__pyx_t_20) {
     PyTuple_SET_ITEM(__pyx_t_22, 0, __pyx_t_20); __Pyx_GIVEREF(__pyx_t_20); __pyx_t_20 = NULL;
@@ -2072,7 +2069,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
   __pyx_t_17 = 0;
   __pyx_t_18 = 0;
   __pyx_t_19 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_22, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 115; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_22, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -2083,8 +2080,8 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
     #else
     Py_ssize_t size = PySequence_Size(sequence);
     #endif
-    if (unlikely(size != 4)) {
-      if (size > 4) __Pyx_RaiseTooManyValuesError(4);
+    if (unlikely(size != 2)) {
+      if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
       {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     }
@@ -2092,48 +2089,35 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
     if (likely(PyTuple_CheckExact(sequence))) {
       __pyx_t_2 = PyTuple_GET_ITEM(sequence, 0); 
       __pyx_t_22 = PyTuple_GET_ITEM(sequence, 1); 
-      __pyx_t_19 = PyTuple_GET_ITEM(sequence, 2); 
-      __pyx_t_18 = PyTuple_GET_ITEM(sequence, 3); 
     } else {
       __pyx_t_2 = PyList_GET_ITEM(sequence, 0); 
       __pyx_t_22 = PyList_GET_ITEM(sequence, 1); 
-      __pyx_t_19 = PyList_GET_ITEM(sequence, 2); 
-      __pyx_t_18 = PyList_GET_ITEM(sequence, 3); 
     }
     __Pyx_INCREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_t_22);
-    __Pyx_INCREF(__pyx_t_19);
-    __Pyx_INCREF(__pyx_t_18);
     #else
-    {
-      Py_ssize_t i;
-      PyObject** temps[4] = {&__pyx_t_2,&__pyx_t_22,&__pyx_t_19,&__pyx_t_18};
-      for (i=0; i < 4; i++) {
-        PyObject* item = PySequence_ITEM(sequence, i); if (unlikely(!item)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-        __Pyx_GOTREF(item);
-        *(temps[i]) = item;
-      }
-    }
+    __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_22 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_22)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_22);
     #endif
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   } else {
     Py_ssize_t index = -1;
-    PyObject** temps[4] = {&__pyx_t_2,&__pyx_t_22,&__pyx_t_19,&__pyx_t_18};
-    __pyx_t_17 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-    __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_19 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_19);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_23 = Py_TYPE(__pyx_t_17)->tp_iternext;
-    for (index=0; index < 4; index++) {
-      PyObject* item = __pyx_t_23(__pyx_t_17); if (unlikely(!item)) goto __pyx_L3_unpacking_failed;
-      __Pyx_GOTREF(item);
-      *(temps[index]) = item;
-    }
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_23(__pyx_t_17), 4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_23 = Py_TYPE(__pyx_t_19)->tp_iternext;
+    index = 0; __pyx_t_2 = __pyx_t_23(__pyx_t_19); if (unlikely(!__pyx_t_2)) goto __pyx_L3_unpacking_failed;
+    __Pyx_GOTREF(__pyx_t_2);
+    index = 1; __pyx_t_22 = __pyx_t_23(__pyx_t_19); if (unlikely(!__pyx_t_22)) goto __pyx_L3_unpacking_failed;
+    __Pyx_GOTREF(__pyx_t_22);
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_23(__pyx_t_19), 2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __pyx_t_23 = NULL;
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     goto __pyx_L4_unpacking_done;
     __pyx_L3_unpacking_failed:;
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
     __pyx_t_23 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
     {__pyx_filename = __pyx_f[0]; __pyx_lineno = 114; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
@@ -2143,20 +2127,16 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
   /* "sklearn/linear_model/sgd_fast_adaptive.pyx":114
  *         The fitted intercept term.
  *     """
- *     standard_weights, standard_intercept,\             # <<<<<<<<<<<<<<
- *         _, _ = _plain_sgd(weights,
+ *     standard_weights, standard_intercept = _plain_sgd(weights,             # <<<<<<<<<<<<<<
  *                           intercept,
+ *                           None,
  */
   __pyx_v_standard_weights = __pyx_t_2;
   __pyx_t_2 = 0;
   __pyx_v_standard_intercept = __pyx_t_22;
   __pyx_t_22 = 0;
-  __pyx_v__ = __pyx_t_19;
-  __pyx_t_19 = 0;
-  __Pyx_DECREF_SET(__pyx_v__, __pyx_t_18);
-  __pyx_t_18 = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":132
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":131
  *                           intercept_decay,
  *                           0)
  *     return standard_weights, standard_intercept             # <<<<<<<<<<<<<<
@@ -2164,7 +2144,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 132; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 131; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_standard_weights);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_standard_weights);
@@ -2219,13 +2199,12 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_plain_sgd(
   __pyx_L2:;
   __Pyx_XDECREF(__pyx_v_standard_weights);
   __Pyx_XDECREF(__pyx_v_standard_intercept);
-  __Pyx_XDECREF(__pyx_v__);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "sklearn/linear_model/sgd_fast_adaptive.pyx":135
+/* "sklearn/linear_model/sgd_fast_adaptive.pyx":134
  * 
  * 
  * def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
@@ -2308,97 +2287,97 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_3average_s
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_intercept)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_average_weights)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 2); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 2); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_average_intercept)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 3); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 3); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  4:
         if (likely((values[4] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_loss)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 4); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 4); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  5:
         if (likely((values[5] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_penalty_type)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 5); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 5); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  6:
         if (likely((values[6] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_alpha)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 6); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 6); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  7:
         if (likely((values[7] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_C)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 7); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 7); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  8:
         if (likely((values[8] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_l1_ratio)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 8); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 8); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  9:
         if (likely((values[9] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_dataset)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 9); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 9); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 10:
         if (likely((values[10] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_n_iter)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 10); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 10); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 11:
         if (likely((values[11] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_fit_intercept)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 11); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 11); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 12:
         if (likely((values[12] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_verbose)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 12); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 12); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 13:
         if (likely((values[13] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_shuffle)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 13); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 13); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 14:
         if (likely((values[14] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_seed)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 14); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 14); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 15:
         if (likely((values[15] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_weight_pos)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 15); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 15); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 16:
         if (likely((values[16] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_weight_neg)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 16); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 16); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 17:
         if (likely((values[17] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_learning_rate)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 17); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 17); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 18:
         if (likely((values[18] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_eta0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 18); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 18); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 19:
         if (likely((values[19] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_power_t)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 19); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, 19); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 20:
         if (kw_args > 0) {
@@ -2417,7 +2396,7 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_3average_s
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "average_sgd") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "average_sgd") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2449,53 +2428,53 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_3average_s
       }
     }
     __pyx_v_weights = ((PyArrayObject *)values[0]);
-    __pyx_v_intercept = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_intercept = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_average_weights = ((PyArrayObject *)values[2]);
-    __pyx_v_average_intercept = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_average_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_average_intercept = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_average_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_loss = ((struct __pyx_obj_7sklearn_12linear_model_8sgd_fast_LossFunction *)values[4]);
-    __pyx_v_penalty_type = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_penalty_type == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_alpha = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_alpha == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 141; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_C = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_C == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 141; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_l1_ratio = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_l1_ratio == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_penalty_type = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_penalty_type == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_alpha = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_alpha == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_C = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_C == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 140; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_l1_ratio = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_l1_ratio == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 141; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_dataset = ((struct __pyx_obj_7sklearn_5utils_11seq_dataset_SequentialDataset *)values[9]);
-    __pyx_v_n_iter = __Pyx_PyInt_As_int(values[10]); if (unlikely((__pyx_v_n_iter == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_fit_intercept = __Pyx_PyInt_As_int(values[11]); if (unlikely((__pyx_v_fit_intercept == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_verbose = __Pyx_PyInt_As_int(values[12]); if (unlikely((__pyx_v_verbose == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_shuffle = __Pyx_PyObject_IsTrue(values[13]); if (unlikely((__pyx_v_shuffle == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_seed = __Pyx_PyInt_As_npy_uint32(values[14]); if (unlikely((__pyx_v_seed == (npy_uint32)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_weight_pos = __pyx_PyFloat_AsDouble(values[15]); if (unlikely((__pyx_v_weight_pos == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_weight_neg = __pyx_PyFloat_AsDouble(values[16]); if (unlikely((__pyx_v_weight_neg == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_learning_rate = __Pyx_PyInt_As_int(values[17]); if (unlikely((__pyx_v_learning_rate == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_eta0 = __pyx_PyFloat_AsDouble(values[18]); if (unlikely((__pyx_v_eta0 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_power_t = __pyx_PyFloat_AsDouble(values[19]); if (unlikely((__pyx_v_power_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_n_iter = __Pyx_PyInt_As_int(values[10]); if (unlikely((__pyx_v_n_iter == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_fit_intercept = __Pyx_PyInt_As_int(values[11]); if (unlikely((__pyx_v_fit_intercept == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_verbose = __Pyx_PyInt_As_int(values[12]); if (unlikely((__pyx_v_verbose == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_shuffle = __Pyx_PyObject_IsTrue(values[13]); if (unlikely((__pyx_v_shuffle == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_seed = __Pyx_PyInt_As_npy_uint32(values[14]); if (unlikely((__pyx_v_seed == (npy_uint32)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 144; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_weight_pos = __pyx_PyFloat_AsDouble(values[15]); if (unlikely((__pyx_v_weight_pos == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_weight_neg = __pyx_PyFloat_AsDouble(values[16]); if (unlikely((__pyx_v_weight_neg == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 145; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_learning_rate = __Pyx_PyInt_As_int(values[17]); if (unlikely((__pyx_v_learning_rate == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_eta0 = __pyx_PyFloat_AsDouble(values[18]); if (unlikely((__pyx_v_eta0 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 146; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_power_t = __pyx_PyFloat_AsDouble(values[19]); if (unlikely((__pyx_v_power_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 147; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     if (values[20]) {
-      __pyx_v_t = __pyx_PyFloat_AsDouble(values[20]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 149; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_v_t = __pyx_PyFloat_AsDouble(values[20]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 148; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     } else {
       __pyx_v_t = ((double)0.0);
     }
     if (values[21]) {
-      __pyx_v_intercept_decay = __pyx_PyFloat_AsDouble(values[21]); if (unlikely((__pyx_v_intercept_decay == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_v_intercept_decay = __pyx_PyFloat_AsDouble(values[21]); if (unlikely((__pyx_v_intercept_decay == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 149; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     } else {
       __pyx_v_intercept_decay = ((double)1.0);
     }
     if (values[22]) {
-      __pyx_v_average = __Pyx_PyInt_As_int(values[22]); if (unlikely((__pyx_v_average == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 151; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_v_average = __Pyx_PyInt_As_int(values[22]); if (unlikely((__pyx_v_average == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 150; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     } else {
       __pyx_v_average = ((int)1);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("average_sgd", 0, 20, 23, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("sklearn.linear_model.sgd_fast_adaptive.average_sgd", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_weights), __pyx_ptype_5numpy_ndarray, 1, "weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_average_weights), __pyx_ptype_5numpy_ndarray, 1, "average_weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 137; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_loss), __pyx_ptype_7sklearn_12linear_model_8sgd_fast_LossFunction, 1, "loss", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 139; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dataset), __pyx_ptype_7sklearn_5utils_11seq_dataset_SequentialDataset, 1, "dataset", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 143; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_weights), __pyx_ptype_5numpy_ndarray, 1, "weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_average_weights), __pyx_ptype_5numpy_ndarray, 1, "average_weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 136; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_loss), __pyx_ptype_7sklearn_12linear_model_8sgd_fast_LossFunction, 1, "loss", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 138; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dataset), __pyx_ptype_7sklearn_5utils_11seq_dataset_SequentialDataset, 1, "dataset", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 142; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_sgd(__pyx_self, __pyx_v_weights, __pyx_v_intercept, __pyx_v_average_weights, __pyx_v_average_intercept, __pyx_v_loss, __pyx_v_penalty_type, __pyx_v_alpha, __pyx_v_C, __pyx_v_l1_ratio, __pyx_v_dataset, __pyx_v_n_iter, __pyx_v_fit_intercept, __pyx_v_verbose, __pyx_v_shuffle, __pyx_v_seed, __pyx_v_weight_pos, __pyx_v_weight_neg, __pyx_v_learning_rate, __pyx_v_eta0, __pyx_v_power_t, __pyx_v_t, __pyx_v_intercept_decay, __pyx_v_average);
 
   /* function exit code */
@@ -2552,16 +2531,16 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_s
   __pyx_pybuffernd_average_weights.rcbuffer = &__pyx_pybuffer_average_weights;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_pybuffernd_weights.diminfo[0].strides = __pyx_pybuffernd_weights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_weights.diminfo[0].shape = __pyx_pybuffernd_weights.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_average_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_average_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_average_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_average_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_pybuffernd_average_weights.diminfo[0].strides = __pyx_pybuffernd_average_weights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_average_weights.diminfo[0].shape = __pyx_pybuffernd_average_weights.rcbuffer->pybuffer.shape[0];
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":221
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":220
  *         The averaged intercept accross iterations
  *     """
  *     return _plain_sgd(weights,             # <<<<<<<<<<<<<<
@@ -2569,149 +2548,149 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_s
  *                       average_weights,
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_plain_sgd); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_plain_sgd); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":222
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":221
  *     """
  *     return _plain_sgd(weights,
  *                       intercept,             # <<<<<<<<<<<<<<
  *                       average_weights,
  *                       average_intercept,
  */
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 222; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":224
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":223
  *                       intercept,
  *                       average_weights,
  *                       average_intercept,             # <<<<<<<<<<<<<<
  *                       loss,
  *                       penalty_type,
  */
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_average_intercept); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 224; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_average_intercept); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 223; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":226
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":225
  *                       average_intercept,
  *                       loss,
  *                       penalty_type,             # <<<<<<<<<<<<<<
  *                       alpha, C,
  *                       l1_ratio,
  */
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_penalty_type); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_penalty_type); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 225; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":227
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":226
  *                       loss,
  *                       penalty_type,
  *                       alpha, C,             # <<<<<<<<<<<<<<
  *                       l1_ratio,
  *                       dataset,
  */
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_alpha); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_alpha); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_C); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_C); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 226; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":228
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":227
  *                       penalty_type,
  *                       alpha, C,
  *                       l1_ratio,             # <<<<<<<<<<<<<<
  *                       dataset,
  *                       n_iter, fit_intercept,
  */
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_l1_ratio); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 228; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_l1_ratio); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 227; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":230
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":229
  *                       l1_ratio,
  *                       dataset,
  *                       n_iter, fit_intercept,             # <<<<<<<<<<<<<<
  *                       verbose, shuffle, seed,
  *                       weight_pos, weight_neg,
  */
-  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_n_iter); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_n_iter); if (unlikely(!__pyx_t_9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_fit_intercept); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_fit_intercept); if (unlikely(!__pyx_t_10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 229; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_10);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":231
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":230
  *                       dataset,
  *                       n_iter, fit_intercept,
  *                       verbose, shuffle, seed,             # <<<<<<<<<<<<<<
  *                       weight_pos, weight_neg,
  *                       learning_rate, eta0,
  */
-  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_verbose); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_11 = __Pyx_PyInt_From_int(__pyx_v_verbose); if (unlikely(!__pyx_t_11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = __Pyx_PyBool_FromLong(__pyx_v_shuffle); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_12 = __Pyx_PyBool_FromLong(__pyx_v_shuffle); if (unlikely(!__pyx_t_12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = __Pyx_PyInt_From_npy_uint32(__pyx_v_seed); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_13 = __Pyx_PyInt_From_npy_uint32(__pyx_v_seed); if (unlikely(!__pyx_t_13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 230; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_13);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":232
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":231
  *                       n_iter, fit_intercept,
  *                       verbose, shuffle, seed,
  *                       weight_pos, weight_neg,             # <<<<<<<<<<<<<<
  *                       learning_rate, eta0,
  *                       power_t,
  */
-  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_weight_pos); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 232; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_weight_pos); if (unlikely(!__pyx_t_14)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_14);
-  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_weight_neg); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 232; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_weight_neg); if (unlikely(!__pyx_t_15)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 231; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_15);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":233
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":232
  *                       verbose, shuffle, seed,
  *                       weight_pos, weight_neg,
  *                       learning_rate, eta0,             # <<<<<<<<<<<<<<
  *                       power_t,
  *                       t,
  */
-  __pyx_t_16 = __Pyx_PyInt_From_int(__pyx_v_learning_rate); if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_16 = __Pyx_PyInt_From_int(__pyx_v_learning_rate); if (unlikely(!__pyx_t_16)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 232; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_16);
-  __pyx_t_17 = PyFloat_FromDouble(__pyx_v_eta0); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_17 = PyFloat_FromDouble(__pyx_v_eta0); if (unlikely(!__pyx_t_17)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 232; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_17);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":234
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":233
  *                       weight_pos, weight_neg,
  *                       learning_rate, eta0,
  *                       power_t,             # <<<<<<<<<<<<<<
  *                       t,
  *                       intercept_decay,
  */
-  __pyx_t_18 = PyFloat_FromDouble(__pyx_v_power_t); if (unlikely(!__pyx_t_18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_18 = PyFloat_FromDouble(__pyx_v_power_t); if (unlikely(!__pyx_t_18)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 233; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_18);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":235
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":234
  *                       learning_rate, eta0,
  *                       power_t,
  *                       t,             # <<<<<<<<<<<<<<
  *                       intercept_decay,
  *                       average)
  */
-  __pyx_t_19 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_19 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 234; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_19);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":236
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":235
  *                       power_t,
  *                       t,
  *                       intercept_decay,             # <<<<<<<<<<<<<<
  *                       average)
  * 
  */
-  __pyx_t_20 = PyFloat_FromDouble(__pyx_v_intercept_decay); if (unlikely(!__pyx_t_20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_20 = PyFloat_FromDouble(__pyx_v_intercept_decay); if (unlikely(!__pyx_t_20)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 235; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_20);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":237
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":236
  *                       t,
  *                       intercept_decay,
  *                       average)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_21 = __Pyx_PyInt_From_int(__pyx_v_average); if (unlikely(!__pyx_t_21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 237; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_21 = __Pyx_PyInt_From_int(__pyx_v_average); if (unlikely(!__pyx_t_21)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 236; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_21);
   __pyx_t_22 = NULL;
   __pyx_t_23 = 0;
@@ -2725,7 +2704,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_s
       __pyx_t_23 = 1;
     }
   }
-  __pyx_t_24 = PyTuple_New(23+__pyx_t_23); if (unlikely(!__pyx_t_24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_24 = PyTuple_New(23+__pyx_t_23); if (unlikely(!__pyx_t_24)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_24);
   if (__pyx_t_22) {
     PyTuple_SET_ITEM(__pyx_t_24, 0, __pyx_t_22); __Pyx_GIVEREF(__pyx_t_22); __pyx_t_22 = NULL;
@@ -2799,7 +2778,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_s
   __pyx_t_19 = 0;
   __pyx_t_20 = 0;
   __pyx_t_21 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_24, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 221; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_24, NULL); if (unlikely(!__pyx_t_1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 220; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_24); __pyx_t_24 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -2807,7 +2786,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_s
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":135
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":134
  * 
  * 
  * def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
@@ -2857,7 +2836,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_2average_s
   return __pyx_r;
 }
 
-/* "sklearn/linear_model/sgd_fast_adaptive.pyx":240
+/* "sklearn/linear_model/sgd_fast_adaptive.pyx":239
  * 
  * 
  * def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
@@ -2939,97 +2918,97 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_5_plain_sg
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_intercept)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 1); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_average_weights)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 2); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 2); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_average_intercept)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 3); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 3); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  4:
         if (likely((values[4] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_loss)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 4); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 4); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  5:
         if (likely((values[5] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_penalty_type)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 5); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 5); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  6:
         if (likely((values[6] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_alpha)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 6); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 6); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  7:
         if (likely((values[7] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_C)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 7); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 7); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  8:
         if (likely((values[8] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_l1_ratio)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 8); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 8); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case  9:
         if (likely((values[9] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_dataset)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 9); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 9); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 10:
         if (likely((values[10] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_n_iter)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 10); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 10); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 11:
         if (likely((values[11] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_fit_intercept)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 11); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 11); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 12:
         if (likely((values[12] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_verbose)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 12); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 12); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 13:
         if (likely((values[13] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_shuffle)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 13); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 13); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 14:
         if (likely((values[14] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_seed)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 14); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 14); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 15:
         if (likely((values[15] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_weight_pos)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 15); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 15); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 16:
         if (likely((values[16] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_weight_neg)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 16); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 16); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 17:
         if (likely((values[17] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_learning_rate)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 17); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 17); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 18:
         if (likely((values[18] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_eta0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 18); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 18); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 19:
         if (likely((values[19] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_power_t)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 19); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+          __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, 19); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
         }
         case 20:
         if (kw_args > 0) {
@@ -3048,7 +3027,7 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_5_plain_sg
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_plain_sgd") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "_plain_sgd") < 0)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -3080,53 +3059,53 @@ static PyObject *__pyx_pw_7sklearn_12linear_model_17sgd_fast_adaptive_5_plain_sg
       }
     }
     __pyx_v_weights = ((PyArrayObject *)values[0]);
-    __pyx_v_intercept = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_intercept = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_average_weights = ((PyArrayObject *)values[2]);
-    __pyx_v_average_intercept = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_average_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_average_intercept = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_average_intercept == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 242; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_loss = ((struct __pyx_obj_7sklearn_12linear_model_8sgd_fast_LossFunction *)values[4]);
-    __pyx_v_penalty_type = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_penalty_type == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 245; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_alpha = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_alpha == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_C = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_C == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_l1_ratio = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_l1_ratio == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 247; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_penalty_type = __Pyx_PyInt_As_int(values[5]); if (unlikely((__pyx_v_penalty_type == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 244; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_alpha = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_alpha == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 245; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_C = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_C == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 245; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_l1_ratio = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_l1_ratio == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 246; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     __pyx_v_dataset = ((struct __pyx_obj_7sklearn_5utils_11seq_dataset_SequentialDataset *)values[9]);
-    __pyx_v_n_iter = __Pyx_PyInt_As_int(values[10]); if (unlikely((__pyx_v_n_iter == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_fit_intercept = __Pyx_PyInt_As_int(values[11]); if (unlikely((__pyx_v_fit_intercept == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_verbose = __Pyx_PyInt_As_int(values[12]); if (unlikely((__pyx_v_verbose == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_shuffle = __Pyx_PyObject_IsTrue(values[13]); if (unlikely((__pyx_v_shuffle == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_seed = __Pyx_PyInt_As_npy_uint32(values[14]); if (unlikely((__pyx_v_seed == (npy_uint32)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_weight_pos = __pyx_PyFloat_AsDouble(values[15]); if (unlikely((__pyx_v_weight_pos == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_weight_neg = __pyx_PyFloat_AsDouble(values[16]); if (unlikely((__pyx_v_weight_neg == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_learning_rate = __Pyx_PyInt_As_int(values[17]); if (unlikely((__pyx_v_learning_rate == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_eta0 = __pyx_PyFloat_AsDouble(values[18]); if (unlikely((__pyx_v_eta0 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
-    __pyx_v_power_t = __pyx_PyFloat_AsDouble(values[19]); if (unlikely((__pyx_v_power_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 253; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_n_iter = __Pyx_PyInt_As_int(values[10]); if (unlikely((__pyx_v_n_iter == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_fit_intercept = __Pyx_PyInt_As_int(values[11]); if (unlikely((__pyx_v_fit_intercept == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_verbose = __Pyx_PyInt_As_int(values[12]); if (unlikely((__pyx_v_verbose == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_shuffle = __Pyx_PyObject_IsTrue(values[13]); if (unlikely((__pyx_v_shuffle == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_seed = __Pyx_PyInt_As_npy_uint32(values[14]); if (unlikely((__pyx_v_seed == (npy_uint32)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 249; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_weight_pos = __pyx_PyFloat_AsDouble(values[15]); if (unlikely((__pyx_v_weight_pos == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_weight_neg = __pyx_PyFloat_AsDouble(values[16]); if (unlikely((__pyx_v_weight_neg == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 250; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_learning_rate = __Pyx_PyInt_As_int(values[17]); if (unlikely((__pyx_v_learning_rate == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_eta0 = __pyx_PyFloat_AsDouble(values[18]); if (unlikely((__pyx_v_eta0 == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 251; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+    __pyx_v_power_t = __pyx_PyFloat_AsDouble(values[19]); if (unlikely((__pyx_v_power_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 252; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     if (values[20]) {
-      __pyx_v_t = __pyx_PyFloat_AsDouble(values[20]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_v_t = __pyx_PyFloat_AsDouble(values[20]); if (unlikely((__pyx_v_t == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 253; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     } else {
       __pyx_v_t = ((double)0.0);
     }
     if (values[21]) {
-      __pyx_v_intercept_decay = __pyx_PyFloat_AsDouble(values[21]); if (unlikely((__pyx_v_intercept_decay == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_v_intercept_decay = __pyx_PyFloat_AsDouble(values[21]); if (unlikely((__pyx_v_intercept_decay == (double)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 254; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     } else {
       __pyx_v_intercept_decay = ((double)1.0);
     }
     if (values[22]) {
-      __pyx_v_average = __Pyx_PyInt_As_int(values[22]); if (unlikely((__pyx_v_average == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 256; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+      __pyx_v_average = __Pyx_PyInt_As_int(values[22]); if (unlikely((__pyx_v_average == (int)-1) && PyErr_Occurred())) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 255; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
     } else {
       __pyx_v_average = ((int)0);
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
+  __Pyx_RaiseArgtupleInvalid("_plain_sgd", 0, 20, 23, PyTuple_GET_SIZE(__pyx_args)); {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L3_error;}
   __pyx_L3_error:;
   __Pyx_AddTraceback("sklearn.linear_model.sgd_fast_adaptive._plain_sgd", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_weights), __pyx_ptype_5numpy_ndarray, 1, "weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_average_weights), __pyx_ptype_5numpy_ndarray, 1, "average_weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 242; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_loss), __pyx_ptype_7sklearn_12linear_model_8sgd_fast_LossFunction, 1, "loss", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 244; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dataset), __pyx_ptype_7sklearn_5utils_11seq_dataset_SequentialDataset, 1, "dataset", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 248; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_weights), __pyx_ptype_5numpy_ndarray, 1, "weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_average_weights), __pyx_ptype_5numpy_ndarray, 1, "average_weights", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 241; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_loss), __pyx_ptype_7sklearn_12linear_model_8sgd_fast_LossFunction, 1, "loss", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 243; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dataset), __pyx_ptype_7sklearn_5utils_11seq_dataset_SequentialDataset, 1, "dataset", 0))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 247; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_r = __pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sgd(__pyx_self, __pyx_v_weights, __pyx_v_intercept, __pyx_v_average_weights, __pyx_v_average_intercept, __pyx_v_loss, __pyx_v_penalty_type, __pyx_v_alpha, __pyx_v_C, __pyx_v_l1_ratio, __pyx_v_dataset, __pyx_v_n_iter, __pyx_v_fit_intercept, __pyx_v_verbose, __pyx_v_shuffle, __pyx_v_seed, __pyx_v_weight_pos, __pyx_v_weight_neg, __pyx_v_learning_rate, __pyx_v_eta0, __pyx_v_power_t, __pyx_v_t, __pyx_v_intercept_decay, __pyx_v_average);
 
   /* function exit code */
@@ -3221,16 +3200,16 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_pybuffernd_average_weights.rcbuffer = &__pyx_pybuffer_average_weights;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_pybuffernd_weights.diminfo[0].strides = __pyx_pybuffernd_weights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_weights.diminfo[0].shape = __pyx_pybuffernd_weights.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_average_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_average_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_average_weights.rcbuffer->pybuffer, (PyObject*)__pyx_v_average_weights, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 1, 0, __pyx_stack) == -1)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __pyx_pybuffernd_average_weights.diminfo[0].strides = __pyx_pybuffernd_average_weights.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_average_weights.diminfo[0].shape = __pyx_pybuffernd_average_weights.rcbuffer->pybuffer.shape[0];
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":259
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":258
  * 
  *     # get the data information into easy vars
  *     cdef Py_ssize_t n_samples = dataset.n_samples             # <<<<<<<<<<<<<<
@@ -3240,7 +3219,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_t_1 = __pyx_v_dataset->n_samples;
   __pyx_v_n_samples = __pyx_t_1;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":260
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":259
  *     # get the data information into easy vars
  *     cdef Py_ssize_t n_samples = dataset.n_samples
  *     cdef Py_ssize_t n_features = weights.shape[0]             # <<<<<<<<<<<<<<
@@ -3249,7 +3228,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_n_features = (__pyx_v_weights->dimensions[0]);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":262
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":261
  *     cdef Py_ssize_t n_features = weights.shape[0]
  * 
  *     cdef double* w_ptr = &weights[0]             # <<<<<<<<<<<<<<
@@ -3259,7 +3238,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_t_2 = 0;
   __pyx_v_w_ptr = (&(*__Pyx_BufPtrCContig1d(double *, __pyx_pybuffernd_weights.rcbuffer->pybuffer.buf, __pyx_t_2, __pyx_pybuffernd_weights.diminfo[0].strides)));
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":263
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":262
  * 
  *     cdef double* w_ptr = &weights[0]
  *     cdef double *x_data_ptr = NULL             # <<<<<<<<<<<<<<
@@ -3268,7 +3247,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_x_data_ptr = NULL;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":264
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":263
  *     cdef double* w_ptr = &weights[0]
  *     cdef double *x_data_ptr = NULL
  *     cdef int *x_ind_ptr = NULL             # <<<<<<<<<<<<<<
@@ -3277,7 +3256,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_x_ind_ptr = NULL;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":265
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":264
  *     cdef double *x_data_ptr = NULL
  *     cdef int *x_ind_ptr = NULL
  *     cdef double* ps_ptr = NULL             # <<<<<<<<<<<<<<
@@ -3286,7 +3265,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_ps_ptr = NULL;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":268
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":267
  * 
  *     # helper variables
  *     cdef bint infinity = False             # <<<<<<<<<<<<<<
@@ -3295,7 +3274,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_infinity = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":270
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":269
  *     cdef bint infinity = False
  *     cdef int xnnz
  *     cdef double eta = 0.0             # <<<<<<<<<<<<<<
@@ -3304,7 +3283,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_eta = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":271
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":270
  *     cdef int xnnz
  *     cdef double eta = 0.0
  *     cdef double p = 0.0             # <<<<<<<<<<<<<<
@@ -3313,7 +3292,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_p = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":272
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":271
  *     cdef double eta = 0.0
  *     cdef double p = 0.0
  *     cdef double sumloss = 0.0             # <<<<<<<<<<<<<<
@@ -3322,7 +3301,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_sumloss = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":273
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":272
  *     cdef double p = 0.0
  *     cdef double sumloss = 0.0
  *     cdef double y = 0.0             # <<<<<<<<<<<<<<
@@ -3331,7 +3310,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_y = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":275
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":274
  *     cdef double y = 0.0
  *     cdef double sample_weight
  *     cdef double class_weight = 1.0             # <<<<<<<<<<<<<<
@@ -3340,7 +3319,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_class_weight = 1.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":276
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":275
  *     cdef double sample_weight
  *     cdef double class_weight = 1.0
  *     cdef unsigned int count = 0             # <<<<<<<<<<<<<<
@@ -3349,7 +3328,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_count = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":277
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":276
  *     cdef double class_weight = 1.0
  *     cdef unsigned int count = 0
  *     cdef unsigned int epoch = 0             # <<<<<<<<<<<<<<
@@ -3358,7 +3337,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_epoch = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":278
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":277
  *     cdef unsigned int count = 0
  *     cdef unsigned int epoch = 0
  *     cdef unsigned int i = 0             # <<<<<<<<<<<<<<
@@ -3367,7 +3346,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_i = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":279
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":278
  *     cdef unsigned int epoch = 0
  *     cdef unsigned int i = 0
  *     cdef int is_hinge = isinstance(loss, Hinge)             # <<<<<<<<<<<<<<
@@ -3377,7 +3356,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_t_3 = __Pyx_TypeCheck(((PyObject *)__pyx_v_loss), ((PyObject*)__pyx_ptype_7sklearn_12linear_model_8sgd_fast_Hinge)); 
   __pyx_v_is_hinge = __pyx_t_3;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":280
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":279
  *     cdef unsigned int i = 0
  *     cdef int is_hinge = isinstance(loss, Hinge)
  *     cdef double optimal_init = 0.0             # <<<<<<<<<<<<<<
@@ -3386,7 +3365,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_optimal_init = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":281
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":280
  *     cdef int is_hinge = isinstance(loss, Hinge)
  *     cdef double optimal_init = 0.0
  *     cdef double dloss = 0.0             # <<<<<<<<<<<<<<
@@ -3395,7 +3374,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_dloss = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":282
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":281
  *     cdef double optimal_init = 0.0
  *     cdef double dloss = 0.0
  *     cdef double MAX_DLOSS = 1e12             # <<<<<<<<<<<<<<
@@ -3404,52 +3383,52 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_MAX_DLOSS = 1e12;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":286
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":285
  *     # the accumulation of the sums of gradients
  *     cdef np.ndarray[double, ndim = 1, mode = "c"] accu_grad = \
  *         np.zeros((n_features,), dtype=np.float64, order="c")             # <<<<<<<<<<<<<<
  *     cdef double* accu_grad_ptr = <double*> accu_grad.data
  * 
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyInt_FromSsize_t(__pyx_v_n_features); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyInt_FromSsize_t(__pyx_v_n_features); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_6);
   __pyx_t_6 = 0;
-  __pyx_t_6 = PyDict_New(); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = PyDict_New(); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_float64); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_float64); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_8) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_order, __pyx_n_s_c) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_order, __pyx_n_s_c) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_6); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 286; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_8) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_8, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_9 = ((PyArrayObject *)__pyx_t_8);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_accu_grad.rcbuffer->pybuffer, (PyObject*)__pyx_t_9, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_accu_grad = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_accu_grad.rcbuffer->pybuffer.buf = NULL;
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 285; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 284; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     } else {__pyx_pybuffernd_accu_grad.diminfo[0].strides = __pyx_pybuffernd_accu_grad.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_accu_grad.diminfo[0].shape = __pyx_pybuffernd_accu_grad.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -3457,7 +3436,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_v_accu_grad = ((PyArrayObject *)__pyx_t_8);
   __pyx_t_8 = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":287
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":286
  *     cdef np.ndarray[double, ndim = 1, mode = "c"] accu_grad = \
  *         np.zeros((n_features,), dtype=np.float64, order="c")
  *     cdef double* accu_grad_ptr = <double*> accu_grad.data             # <<<<<<<<<<<<<<
@@ -3466,52 +3445,52 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_accu_grad_ptr = ((double *)__pyx_v_accu_grad->data);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":291
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":290
  *     # the accumulation of the sums of squared gradients
  *     cdef np.ndarray[double, ndim = 1, mode = "c"] accu_sq_grad = \
  *         np.zeros((n_features,), dtype=np.float64, order="c")             # <<<<<<<<<<<<<<
  *     cdef double* accu_sq_grad_ptr = <double*> accu_sq_grad.data
  * 
  */
-  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_zeros); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = PyInt_FromSsize_t(__pyx_v_n_features); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyInt_FromSsize_t(__pyx_v_n_features); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_8);
   __Pyx_GIVEREF(__pyx_t_8);
   __pyx_t_8 = 0;
-  __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_8);
   PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_float64); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_7) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_c) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, __pyx_t_4); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_order, __pyx_n_s_c) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, __pyx_t_4); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 291; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_t_10 = ((PyArrayObject *)__pyx_t_7);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_accu_sq_grad.rcbuffer->pybuffer, (PyObject*)__pyx_t_10, &__Pyx_TypeInfo_double, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_accu_sq_grad = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_accu_sq_grad.rcbuffer->pybuffer.buf = NULL;
-      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 290; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 289; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     } else {__pyx_pybuffernd_accu_sq_grad.diminfo[0].strides = __pyx_pybuffernd_accu_sq_grad.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_accu_sq_grad.diminfo[0].shape = __pyx_pybuffernd_accu_sq_grad.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -3519,7 +3498,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_v_accu_sq_grad = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":292
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":291
  *     cdef np.ndarray[double, ndim = 1, mode = "c"] accu_sq_grad = \
  *         np.zeros((n_features,), dtype=np.float64, order="c")
  *     cdef double* accu_sq_grad_ptr = <double*> accu_sq_grad.data             # <<<<<<<<<<<<<<
@@ -3528,14 +3507,14 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
   __pyx_v_accu_sq_grad_ptr = ((double *)__pyx_v_accu_sq_grad->data);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":295
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":294
  * 
  * 
  *     t_start = time()             # <<<<<<<<<<<<<<
  *     with nogil:
  *         for epoch in range(n_iter):
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_time); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 295; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_time); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_8 = NULL;
   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -3548,17 +3527,17 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
     }
   }
   if (__pyx_t_8) {
-    __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 295; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   } else {
-    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 295; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_4); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 294; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_t_start = __pyx_t_7;
   __pyx_t_7 = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":296
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":295
  * 
  *     t_start = time()
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -3572,7 +3551,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
       #endif
       /*try:*/ {
 
-        /* "sklearn/linear_model/sgd_fast_adaptive.pyx":297
+        /* "sklearn/linear_model/sgd_fast_adaptive.pyx":296
  *     t_start = time()
  *     with nogil:
  *         for epoch in range(n_iter):             # <<<<<<<<<<<<<<
@@ -3583,7 +3562,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
         for (__pyx_t_12 = 0; __pyx_t_12 < __pyx_t_11; __pyx_t_12+=1) {
           __pyx_v_epoch = __pyx_t_12;
 
-          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":298
+          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":297
  *     with nogil:
  *         for epoch in range(n_iter):
  *             if verbose > 0:             # <<<<<<<<<<<<<<
@@ -3593,7 +3572,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           __pyx_t_3 = ((__pyx_v_verbose > 0) != 0);
           if (__pyx_t_3) {
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":299
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":298
  *         for epoch in range(n_iter):
  *             if verbose > 0:
  *                 with gil:             # <<<<<<<<<<<<<<
@@ -3606,23 +3585,23 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
                 #endif
                 /*try:*/ {
 
-                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":300
+                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":299
  *             if verbose > 0:
  *                 with gil:
  *                     print("-- Epoch %d" % (epoch + 1))             # <<<<<<<<<<<<<<
  *             if shuffle:
  *                 dataset.shuffle(seed)
  */
-                  __pyx_t_7 = __Pyx_PyInt_From_long((__pyx_v_epoch + 1)); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 300; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+                  __pyx_t_7 = __Pyx_PyInt_From_long((__pyx_v_epoch + 1)); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 299; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
                   __Pyx_GOTREF(__pyx_t_7);
-                  __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_Epoch_d, __pyx_t_7); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 300; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+                  __pyx_t_4 = __Pyx_PyString_Format(__pyx_kp_s_Epoch_d, __pyx_t_7); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 299; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
                   __Pyx_GOTREF(__pyx_t_4);
                   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-                  if (__Pyx_PrintOne(0, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 300; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
+                  if (__Pyx_PrintOne(0, __pyx_t_4) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 299; __pyx_clineno = __LINE__; goto __pyx_L12_error;}
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                 }
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":299
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":298
  *         for epoch in range(n_iter):
  *             if verbose > 0:
  *                 with gil:             # <<<<<<<<<<<<<<
@@ -3649,7 +3628,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           }
           __pyx_L8:;
 
-          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":301
+          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":300
  *                 with gil:
  *                     print("-- Epoch %d" % (epoch + 1))
  *             if shuffle:             # <<<<<<<<<<<<<<
@@ -3659,7 +3638,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           __pyx_t_3 = (__pyx_v_shuffle != 0);
           if (__pyx_t_3) {
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":302
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":301
  *                     print("-- Epoch %d" % (epoch + 1))
  *             if shuffle:
  *                 dataset.shuffle(seed)             # <<<<<<<<<<<<<<
@@ -3671,7 +3650,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           }
           __pyx_L14:;
 
-          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":303
+          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":302
  *             if shuffle:
  *                 dataset.shuffle(seed)
  *             for i in range(n_samples):             # <<<<<<<<<<<<<<
@@ -3682,7 +3661,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_1; __pyx_t_13+=1) {
             __pyx_v_i = __pyx_t_13;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":304
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":303
  *                 dataset.shuffle(seed)
  *             for i in range(n_samples):
  *                 dataset.next(&x_data_ptr,             # <<<<<<<<<<<<<<
@@ -3691,7 +3670,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
             ((struct __pyx_vtabstruct_7sklearn_5utils_11seq_dataset_SequentialDataset *)__pyx_v_dataset->__pyx_vtab)->next(__pyx_v_dataset, (&__pyx_v_x_data_ptr), (&__pyx_v_x_ind_ptr), (&__pyx_v_xnnz), (&__pyx_v_y), (&__pyx_v_sample_weight));
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":310
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":309
  *                              &sample_weight)
  * 
  *                 if t >= 1.0:             # <<<<<<<<<<<<<<
@@ -3701,7 +3680,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             __pyx_t_3 = ((__pyx_v_t >= 1.0) != 0);
             if (__pyx_t_3) {
 
-              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":311
+              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":310
  * 
  *                 if t >= 1.0:
  *                     for j in range(xnnz):             # <<<<<<<<<<<<<<
@@ -3712,7 +3691,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
               for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
                 __pyx_v_j = __pyx_t_15;
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":312
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":311
  *                 if t >= 1.0:
  *                     for j in range(xnnz):
  *                         idx = x_ind_ptr[j]             # <<<<<<<<<<<<<<
@@ -3721,7 +3700,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
                 __pyx_v_idx = (__pyx_v_x_ind_ptr[__pyx_v_j]);
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":313
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":312
  *                     for j in range(xnnz):
  *                         idx = x_ind_ptr[j]
  *                         update_weights(idx, eta0, alpha, t, w_ptr,             # <<<<<<<<<<<<<<
@@ -3734,7 +3713,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             }
             __pyx_L17:;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":316
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":315
  *                                        accu_grad_ptr, accu_sq_grad_ptr)
  * 
  *                 p = dot(w_ptr, x_data_ptr, x_ind_ptr, xnnz) + intercept             # <<<<<<<<<<<<<<
@@ -3743,7 +3722,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
             __pyx_v_p = (__pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(__pyx_v_w_ptr, __pyx_v_x_data_ptr, __pyx_v_x_ind_ptr, __pyx_v_xnnz) + __pyx_v_intercept);
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":318
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":317
  *                 p = dot(w_ptr, x_data_ptr, x_ind_ptr, xnnz) + intercept
  * 
  *                 if verbose > 0:             # <<<<<<<<<<<<<<
@@ -3753,7 +3732,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             __pyx_t_3 = ((__pyx_v_verbose > 0) != 0);
             if (__pyx_t_3) {
 
-              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":319
+              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":318
  * 
  *                 if verbose > 0:
  *                     sumloss += loss.loss(p, y)             # <<<<<<<<<<<<<<
@@ -3765,7 +3744,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             }
             __pyx_L20:;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":321
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":320
  *                     sumloss += loss.loss(p, y)
  * 
  *                 class_weight = weight_pos if y > 0.0 else weight_neg             # <<<<<<<<<<<<<<
@@ -3779,7 +3758,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             }
             __pyx_v_class_weight = __pyx_t_16;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":323
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":322
  *                 class_weight = weight_pos if y > 0.0 else weight_neg
  * 
  *                 dloss = loss._dloss(p, y)             # <<<<<<<<<<<<<<
@@ -3788,7 +3767,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
             __pyx_v_dloss = ((struct __pyx_vtabstruct_7sklearn_12linear_model_8sgd_fast_LossFunction *)__pyx_v_loss->__pyx_vtab)->_dloss(__pyx_v_loss, __pyx_v_p, __pyx_v_y);
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":326
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":325
  *                 # clip dloss with large values to avoid numerical
  *                 # instabilities
  *                 if dloss < -MAX_DLOSS:             # <<<<<<<<<<<<<<
@@ -3798,7 +3777,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             __pyx_t_3 = ((__pyx_v_dloss < (-__pyx_v_MAX_DLOSS)) != 0);
             if (__pyx_t_3) {
 
-              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":327
+              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":326
  *                 # instabilities
  *                 if dloss < -MAX_DLOSS:
  *                     dloss = -MAX_DLOSS             # <<<<<<<<<<<<<<
@@ -3809,7 +3788,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
               goto __pyx_L21;
             }
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":328
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":327
  *                 if dloss < -MAX_DLOSS:
  *                     dloss = -MAX_DLOSS
  *                 elif dloss > MAX_DLOSS:             # <<<<<<<<<<<<<<
@@ -3819,7 +3798,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             __pyx_t_3 = ((__pyx_v_dloss > __pyx_v_MAX_DLOSS) != 0);
             if (__pyx_t_3) {
 
-              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":329
+              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":328
  *                     dloss = -MAX_DLOSS
  *                 elif dloss > MAX_DLOSS:
  *                     dloss = MAX_DLOSS             # <<<<<<<<<<<<<<
@@ -3831,7 +3810,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             }
             __pyx_L21:;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":331
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":330
  *                     dloss = MAX_DLOSS
  * 
  *                 if dloss != 0.0:             # <<<<<<<<<<<<<<
@@ -3841,7 +3820,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             __pyx_t_3 = ((__pyx_v_dloss != 0.0) != 0);
             if (__pyx_t_3) {
 
-              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":332
+              /* "sklearn/linear_model/sgd_fast_adaptive.pyx":331
  * 
  *                 if dloss != 0.0:
  *                     for j in range(xnnz):             # <<<<<<<<<<<<<<
@@ -3852,7 +3831,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
               for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_14; __pyx_t_15+=1) {
                 __pyx_v_j = __pyx_t_15;
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":333
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":332
  *                 if dloss != 0.0:
  *                     for j in range(xnnz):
  *                         idx = x_ind_ptr[j]             # <<<<<<<<<<<<<<
@@ -3861,7 +3840,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
                 __pyx_v_idx = (__pyx_v_x_ind_ptr[__pyx_v_j]);
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":334
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":333
  *                     for j in range(xnnz):
  *                         idx = x_ind_ptr[j]
  *                         val = x_data_ptr[j]             # <<<<<<<<<<<<<<
@@ -3870,7 +3849,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
                 __pyx_v_val = (__pyx_v_x_data_ptr[__pyx_v_j]);
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":335
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":334
  *                         idx = x_ind_ptr[j]
  *                         val = x_data_ptr[j]
  *                         grad = val * dloss             # <<<<<<<<<<<<<<
@@ -3879,7 +3858,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
                 __pyx_v_grad = (__pyx_v_val * __pyx_v_dloss);
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":336
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":335
  *                         val = x_data_ptr[j]
  *                         grad = val * dloss
  *                         accu_grad[idx] += grad             # <<<<<<<<<<<<<<
@@ -3889,7 +3868,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
                 __pyx_t_17 = __pyx_v_idx;
                 *__Pyx_BufPtrCContig1d(double *, __pyx_pybuffernd_accu_grad.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_accu_grad.diminfo[0].strides) += __pyx_v_grad;
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":337
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":336
  *                         grad = val * dloss
  *                         accu_grad[idx] += grad
  *                         accu_sq_grad[idx] += grad * grad             # <<<<<<<<<<<<<<
@@ -3903,7 +3882,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             }
             __pyx_L22:;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":339
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":338
  *                         accu_sq_grad[idx] += grad * grad
  * 
  *                 t += 1             # <<<<<<<<<<<<<<
@@ -3912,7 +3891,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
             __pyx_v_t = (__pyx_v_t + 1.0);
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":340
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":339
  * 
  *                 t += 1
  *                 count += 1             # <<<<<<<<<<<<<<
@@ -3922,7 +3901,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             __pyx_v_count = (__pyx_v_count + 1);
           }
 
-          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":343
+          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":342
  * 
  *             # report epoch information
  *             if verbose > 0:             # <<<<<<<<<<<<<<
@@ -3932,7 +3911,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           __pyx_t_3 = ((__pyx_v_verbose > 0) != 0);
           if (__pyx_t_3) {
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":344
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":343
  *             # report epoch information
  *             if verbose > 0:
  *                 with gil:             # <<<<<<<<<<<<<<
@@ -3945,24 +3924,24 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
                 #endif
                 /*try:*/ {
 
-                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":347
+                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":346
  *                     print("Norm: %.2f, NNZs: %d, "
  *                           "Bias: %.6f, T: %d, Avg. loss: %.6f"
  *                           % (sqnorm(w_ptr, n_features),             # <<<<<<<<<<<<<<
  *                              weights.nonzero()[0].shape[0],
  *                              intercept, count, sumloss / count))
  */
-                  __pyx_t_4 = PyFloat_FromDouble(__pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(__pyx_v_w_ptr, __pyx_v_n_features)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_4 = PyFloat_FromDouble(__pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(__pyx_v_w_ptr, __pyx_v_n_features)); if (unlikely(!__pyx_t_4)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_4);
 
-                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":348
+                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":347
  *                           "Bias: %.6f, T: %d, Avg. loss: %.6f"
  *                           % (sqnorm(w_ptr, n_features),
  *                              weights.nonzero()[0].shape[0],             # <<<<<<<<<<<<<<
  *                              intercept, count, sumloss / count))
  *                     print("Total training time: %.2f seconds."
  */
-                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_weights), __pyx_n_s_nonzero); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_weights), __pyx_n_s_nonzero); if (unlikely(!__pyx_t_8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_8);
                   __pyx_t_6 = NULL;
                   if (CYTHON_COMPILING_IN_CPYTHON && likely(PyMethod_Check(__pyx_t_8))) {
@@ -3975,45 +3954,45 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
                     }
                   }
                   if (__pyx_t_6) {
-                    __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                    __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_6); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
                   } else {
-                    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                    __pyx_t_7 = __Pyx_PyObject_CallNoArg(__pyx_t_8); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   }
                   __Pyx_GOTREF(__pyx_t_7);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                  __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;};
+                  __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;};
                   __Pyx_GOTREF(__pyx_t_8);
                   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-                  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_shape); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_shape); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_7);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                  __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;};
+                  __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_7, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(__pyx_t_8 == NULL)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;};
                   __Pyx_GOTREF(__pyx_t_8);
                   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":349
+                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":348
  *                           % (sqnorm(w_ptr, n_features),
  *                              weights.nonzero()[0].shape[0],
  *                              intercept, count, sumloss / count))             # <<<<<<<<<<<<<<
  *                     print("Total training time: %.2f seconds."
  *                           % (time() - t_start))
  */
-                  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_7);
-                  __pyx_t_6 = __Pyx_PyInt_From_unsigned_int(__pyx_v_count); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_6 = __Pyx_PyInt_From_unsigned_int(__pyx_v_count); if (unlikely(!__pyx_t_6)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_6);
-                  __pyx_t_5 = PyFloat_FromDouble((__pyx_v_sumloss / __pyx_v_count)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_5 = PyFloat_FromDouble((__pyx_v_sumloss / __pyx_v_count)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 348; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_5);
 
-                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":347
+                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":346
  *                     print("Norm: %.2f, NNZs: %d, "
  *                           "Bias: %.6f, T: %d, Avg. loss: %.6f"
  *                           % (sqnorm(w_ptr, n_features),             # <<<<<<<<<<<<<<
  *                              weights.nonzero()[0].shape[0],
  *                              intercept, count, sumloss / count))
  */
-                  __pyx_t_19 = PyTuple_New(5); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_19 = PyTuple_New(5); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_19);
                   PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_t_4);
                   __Pyx_GIVEREF(__pyx_t_4);
@@ -4030,20 +4009,20 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
                   __pyx_t_7 = 0;
                   __pyx_t_6 = 0;
                   __pyx_t_5 = 0;
-                  __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_Norm_2f_NNZs_d_Bias_6f_T_d_Avg_l, __pyx_t_19); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 347; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_Norm_2f_NNZs_d_Bias_6f_T_d_Avg_l, __pyx_t_19); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 346; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_5);
                   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-                  if (__Pyx_PrintOne(0, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 345; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  if (__Pyx_PrintOne(0, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 344; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":351
+                  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":350
  *                              intercept, count, sumloss / count))
  *                     print("Total training time: %.2f seconds."
  *                           % (time() - t_start))             # <<<<<<<<<<<<<<
  * 
  *             # floating-point under-/overflow check.
  */
-                  __pyx_t_19 = __Pyx_GetModuleGlobalName(__pyx_n_s_time); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_19 = __Pyx_GetModuleGlobalName(__pyx_n_s_time); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_19);
                   __pyx_t_6 = NULL;
                   if (CYTHON_COMPILING_IN_CPYTHON && unlikely(PyMethod_Check(__pyx_t_19))) {
@@ -4056,24 +4035,24 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
                     }
                   }
                   if (__pyx_t_6) {
-                    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_19, __pyx_t_6); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_19, __pyx_t_6); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
                   } else {
-                    __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_19); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                    __pyx_t_5 = __Pyx_PyObject_CallNoArg(__pyx_t_19); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   }
                   __Pyx_GOTREF(__pyx_t_5);
                   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-                  __pyx_t_19 = PyNumber_Subtract(__pyx_t_5, __pyx_v_t_start); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_19 = PyNumber_Subtract(__pyx_t_5, __pyx_v_t_start); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_19);
                   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-                  __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_Total_training_time_2f_seconds, __pyx_t_19); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 351; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  __pyx_t_5 = __Pyx_PyString_Format(__pyx_kp_s_Total_training_time_2f_seconds, __pyx_t_19); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_GOTREF(__pyx_t_5);
                   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-                  if (__Pyx_PrintOne(0, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 350; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
+                  if (__Pyx_PrintOne(0, __pyx_t_5) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 349; __pyx_clineno = __LINE__; goto __pyx_L29_error;}
                   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
                 }
 
-                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":344
+                /* "sklearn/linear_model/sgd_fast_adaptive.pyx":343
  *             # report epoch information
  *             if verbose > 0:
  *                 with gil:             # <<<<<<<<<<<<<<
@@ -4100,7 +4079,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           }
           __pyx_L25:;
 
-          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":354
+          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":353
  * 
  *             # floating-point under-/overflow check.
  *             if (not skl_isfinite(intercept)             # <<<<<<<<<<<<<<
@@ -4114,7 +4093,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
             goto __pyx_L32_bool_binop_done;
           }
 
-          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":355
+          /* "sklearn/linear_model/sgd_fast_adaptive.pyx":354
  *             # floating-point under-/overflow check.
  *             if (not skl_isfinite(intercept)
  *                 or any_nonfinite(w_ptr, n_features)):             # <<<<<<<<<<<<<<
@@ -4126,7 +4105,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
           __pyx_L32_bool_binop_done:;
           if (__pyx_t_3) {
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":356
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":355
  *             if (not skl_isfinite(intercept)
  *                 or any_nonfinite(w_ptr, n_features)):
  *                 infinity = True             # <<<<<<<<<<<<<<
@@ -4135,7 +4114,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  */
             __pyx_v_infinity = 1;
 
-            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":357
+            /* "sklearn/linear_model/sgd_fast_adaptive.pyx":356
  *                 or any_nonfinite(w_ptr, n_features)):
  *                 infinity = True
  *                 break             # <<<<<<<<<<<<<<
@@ -4148,7 +4127,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
         __pyx_L7_break:;
       }
 
-      /* "sklearn/linear_model/sgd_fast_adaptive.pyx":296
+      /* "sklearn/linear_model/sgd_fast_adaptive.pyx":295
  * 
  *     t_start = time()
  *     with nogil:             # <<<<<<<<<<<<<<
@@ -4172,7 +4151,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
       }
   }
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":359
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":358
  *                 break
  * 
  *     for j in xrange(n_features):             # <<<<<<<<<<<<<<
@@ -4183,7 +4162,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_1; __pyx_t_15+=1) {
     __pyx_v_j = __pyx_t_15;
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":360
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":359
  * 
  *     for j in xrange(n_features):
  *         update_weights(j, eta0, alpha, t, w_ptr, accu_grad_ptr, accu_sq_grad_ptr)             # <<<<<<<<<<<<<<
@@ -4193,7 +4172,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
     __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_update_weights(__pyx_v_j, __pyx_v_eta0, __pyx_v_alpha, __pyx_v_t, __pyx_v_w_ptr, __pyx_v_accu_grad_ptr, __pyx_v_accu_sq_grad_ptr);
   }
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":362
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":361
  *         update_weights(j, eta0, alpha, t, w_ptr, accu_grad_ptr, accu_sq_grad_ptr)
  * 
  *     if infinity:             # <<<<<<<<<<<<<<
@@ -4203,40 +4182,40 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_t_3 = (__pyx_v_infinity != 0);
   if (__pyx_t_3) {
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":365
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":364
  *         raise ValueError(("Floating-point under-/overflow occurred at epoch"
  *                           " #%d. Scaling input data with StandardScaler or"
  *                           " MinMaxScaler might help.") % (epoch + 1))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_epoch + 1)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 365; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_epoch + 1)); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_19 = __Pyx_PyString_Format(__pyx_kp_s_Floating_point_under_overflow_oc, __pyx_t_5); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 365; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_19 = __Pyx_PyString_Format(__pyx_kp_s_Floating_point_under_overflow_oc, __pyx_t_5); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 364; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_19);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":363
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":362
  * 
  *     if infinity:
  *         raise ValueError(("Floating-point under-/overflow occurred at epoch"             # <<<<<<<<<<<<<<
  *                           " #%d. Scaling input data with StandardScaler or"
  *                           " MinMaxScaler might help.") % (epoch + 1))
  */
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 362; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_19);
     __Pyx_GIVEREF(__pyx_t_19);
     __pyx_t_19 = 0;
-    __pyx_t_19 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_5, NULL); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __pyx_t_19 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_5, NULL); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 362; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
     __Pyx_GOTREF(__pyx_t_19);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_Raise(__pyx_t_19, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    {__pyx_filename = __pyx_f[0]; __pyx_lineno = 362; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   }
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":368
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":367
  * 
  * 
  *     return weights, intercept             # <<<<<<<<<<<<<<
@@ -4244,9 +4223,9 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
  * cdef void update_weights(int idx, double eta, double alpha, double t,
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_19 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_19 = PyFloat_FromDouble(__pyx_v_intercept); if (unlikely(!__pyx_t_19)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 367; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_19);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 368; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 367; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(((PyObject *)__pyx_v_weights));
   PyTuple_SET_ITEM(__pyx_t_5, 0, ((PyObject *)__pyx_v_weights));
@@ -4258,7 +4237,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":240
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":239
  * 
  * 
  * def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
@@ -4298,7 +4277,7 @@ static PyObject *__pyx_pf_7sklearn_12linear_model_17sgd_fast_adaptive_4_plain_sg
   return __pyx_r;
 }
 
-/* "sklearn/linear_model/sgd_fast_adaptive.pyx":370
+/* "sklearn/linear_model/sgd_fast_adaptive.pyx":369
  *     return weights, intercept
  * 
  * cdef void update_weights(int idx, double eta, double alpha, double t,             # <<<<<<<<<<<<<<
@@ -4310,7 +4289,7 @@ static void __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_update_weights(i
   double __pyx_v_eta_t;
   double __pyx_v_denom;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":373
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":372
  *                          double* w_ptr, double* accu_grad_ptr,
  *                          double* accu_sq_grad_ptr) nogil:
  *     eta_t = eta * t             # <<<<<<<<<<<<<<
@@ -4319,7 +4298,7 @@ static void __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_update_weights(i
  */
   __pyx_v_eta_t = (__pyx_v_eta * __pyx_v_t);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":375
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":374
  *     eta_t = eta * t
  *     # TODO: include delta
  *     denom = sqrt(accu_sq_grad_ptr[idx]) + eta_t * alpha             # <<<<<<<<<<<<<<
@@ -4328,7 +4307,7 @@ static void __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_update_weights(i
  */
   __pyx_v_denom = (sqrt((__pyx_v_accu_sq_grad_ptr[__pyx_v_idx])) + (__pyx_v_eta_t * __pyx_v_alpha));
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":376
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":375
  *     # TODO: include delta
  *     denom = sqrt(accu_sq_grad_ptr[idx]) + eta_t * alpha
  *     w_ptr[idx] = -eta * accu_grad_ptr[idx] / denom             # <<<<<<<<<<<<<<
@@ -4337,7 +4316,7 @@ static void __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_update_weights(i
  */
   (__pyx_v_w_ptr[__pyx_v_idx]) = (((-__pyx_v_eta) * (__pyx_v_accu_grad_ptr[__pyx_v_idx])) / __pyx_v_denom);
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":370
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":369
  *     return weights, intercept
  * 
  * cdef void update_weights(int idx, double eta, double alpha, double t,             # <<<<<<<<<<<<<<
@@ -4348,7 +4327,7 @@ static void __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_update_weights(i
   /* function exit code */
 }
 
-/* "sklearn/linear_model/sgd_fast_adaptive.pyx":378
+/* "sklearn/linear_model/sgd_fast_adaptive.pyx":377
  *     w_ptr[idx] = -eta * accu_grad_ptr[idx] / denom
  * 
  * cdef bint any_nonfinite(double *w, int n) nogil:             # <<<<<<<<<<<<<<
@@ -4363,7 +4342,7 @@ static int __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_any_nonfinite(dou
   int __pyx_t_2;
   int __pyx_t_3;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":379
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":378
  * 
  * cdef bint any_nonfinite(double *w, int n) nogil:
  *     for i in range(n):             # <<<<<<<<<<<<<<
@@ -4374,7 +4353,7 @@ static int __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_any_nonfinite(dou
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_i = __pyx_t_2;
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":380
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":379
  * cdef bint any_nonfinite(double *w, int n) nogil:
  *     for i in range(n):
  *         if not skl_isfinite(w[i]):             # <<<<<<<<<<<<<<
@@ -4384,7 +4363,7 @@ static int __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_any_nonfinite(dou
     __pyx_t_3 = ((!(skl_isfinite((__pyx_v_w[__pyx_v_i])) != 0)) != 0);
     if (__pyx_t_3) {
 
-      /* "sklearn/linear_model/sgd_fast_adaptive.pyx":381
+      /* "sklearn/linear_model/sgd_fast_adaptive.pyx":380
  *     for i in range(n):
  *         if not skl_isfinite(w[i]):
  *             return True             # <<<<<<<<<<<<<<
@@ -4396,7 +4375,7 @@ static int __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_any_nonfinite(dou
     }
   }
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":382
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":381
  *         if not skl_isfinite(w[i]):
  *             return True
  *     return 0             # <<<<<<<<<<<<<<
@@ -4406,7 +4385,7 @@ static int __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_any_nonfinite(dou
   __pyx_r = 0;
   goto __pyx_L0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":378
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":377
  *     w_ptr[idx] = -eta * accu_grad_ptr[idx] / denom
  * 
  * cdef bint any_nonfinite(double *w, int n) nogil:             # <<<<<<<<<<<<<<
@@ -4419,7 +4398,7 @@ static int __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_any_nonfinite(dou
   return __pyx_r;
 }
 
-/* "sklearn/linear_model/sgd_fast_adaptive.pyx":384
+/* "sklearn/linear_model/sgd_fast_adaptive.pyx":383
  *     return 0
  * 
  * cdef double dot(double* w_ptr,             # <<<<<<<<<<<<<<
@@ -4437,7 +4416,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
   int __pyx_t_1;
   int __pyx_t_2;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":388
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":387
  *                 int* x_ind_ptr,
  *                 int xnnz) nogil:
  *     dot_product = 0.0             # <<<<<<<<<<<<<<
@@ -4446,7 +4425,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
  */
   __pyx_v_dot_product = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":389
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":388
  *                 int xnnz) nogil:
  *     dot_product = 0.0
  *     for j in range(xnnz):             # <<<<<<<<<<<<<<
@@ -4457,7 +4436,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_j = __pyx_t_2;
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":390
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":389
  *     dot_product = 0.0
  *     for j in range(xnnz):
  *         idx = x_ind_ptr[j]             # <<<<<<<<<<<<<<
@@ -4466,7 +4445,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
  */
     __pyx_v_idx = (__pyx_v_x_ind_ptr[__pyx_v_j]);
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":391
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":390
  *     for j in range(xnnz):
  *         idx = x_ind_ptr[j]
  *         val = x_data_ptr[j]             # <<<<<<<<<<<<<<
@@ -4475,7 +4454,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
  */
     __pyx_v_val = (__pyx_v_x_data_ptr[__pyx_v_j]);
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":392
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":391
  *         idx = x_ind_ptr[j]
  *         val = x_data_ptr[j]
  *         weight = w_ptr[idx]             # <<<<<<<<<<<<<<
@@ -4484,7 +4463,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
  */
     __pyx_v_weight = (__pyx_v_w_ptr[__pyx_v_idx]);
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":393
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":392
  *         val = x_data_ptr[j]
  *         weight = w_ptr[idx]
  *         dot_product += val * weight             # <<<<<<<<<<<<<<
@@ -4494,7 +4473,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
     __pyx_v_dot_product = (__pyx_v_dot_product + (__pyx_v_val * __pyx_v_weight));
   }
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":395
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":394
  *         dot_product += val * weight
  * 
  *     return dot_product             # <<<<<<<<<<<<<<
@@ -4504,7 +4483,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
   __pyx_r = __pyx_v_dot_product;
   goto __pyx_L0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":384
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":383
  *     return 0
  * 
  * cdef double dot(double* w_ptr,             # <<<<<<<<<<<<<<
@@ -4517,7 +4496,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_dot(double *__
   return __pyx_r;
 }
 
-/* "sklearn/linear_model/sgd_fast_adaptive.pyx":398
+/* "sklearn/linear_model/sgd_fast_adaptive.pyx":397
  * 
  * 
  * cdef double sqnorm(double * data_ptr, int xnnz) nogil:             # <<<<<<<<<<<<<<
@@ -4533,7 +4512,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(double 
   int __pyx_t_1;
   int __pyx_t_2;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":399
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":398
  * 
  * cdef double sqnorm(double * data_ptr, int xnnz) nogil:
  *     cdef double norm = 0.0             # <<<<<<<<<<<<<<
@@ -4542,7 +4521,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(double 
  */
   __pyx_v_norm = 0.0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":401
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":400
  *     cdef double norm = 0.0
  *     cdef double z
  *     for j in range(xnnz):             # <<<<<<<<<<<<<<
@@ -4553,7 +4532,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(double 
   for (__pyx_t_2 = 0; __pyx_t_2 < __pyx_t_1; __pyx_t_2+=1) {
     __pyx_v_j = __pyx_t_2;
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":402
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":401
  *     cdef double z
  *     for j in range(xnnz):
  *         z = data_ptr[j]             # <<<<<<<<<<<<<<
@@ -4562,7 +4541,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(double 
  */
     __pyx_v_z = (__pyx_v_data_ptr[__pyx_v_j]);
 
-    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":403
+    /* "sklearn/linear_model/sgd_fast_adaptive.pyx":402
  *     for j in range(xnnz):
  *         z = data_ptr[j]
  *         norm += z * z             # <<<<<<<<<<<<<<
@@ -4571,7 +4550,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(double 
     __pyx_v_norm = (__pyx_v_norm + (__pyx_v_z * __pyx_v_z));
   }
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":404
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":403
  *         z = data_ptr[j]
  *         norm += z * z
  *     return norm             # <<<<<<<<<<<<<<
@@ -4579,7 +4558,7 @@ static double __pyx_f_7sklearn_12linear_model_17sgd_fast_adaptive_sqnorm(double 
   __pyx_r = __pyx_v_norm;
   goto __pyx_L0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":398
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":397
  * 
  * 
  * cdef double sqnorm(double * data_ptr, int xnnz) nogil:             # <<<<<<<<<<<<<<
@@ -6625,7 +6604,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_Total_training_time_2f_seconds, __pyx_k_Total_training_time_2f_seconds, sizeof(__pyx_k_Total_training_time_2f_seconds), 0, 0, 1, 0},
   {&__pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_k_Users_dannysullivan_Documents_C, sizeof(__pyx_k_Users_dannysullivan_Documents_C), 0, 0, 1, 0},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
-  {&__pyx_n_s__7, __pyx_k__7, sizeof(__pyx_k__7), 0, 0, 1, 1},
   {&__pyx_n_s_accu_grad, __pyx_k_accu_grad, sizeof(__pyx_k_accu_grad), 0, 0, 1, 1},
   {&__pyx_n_s_accu_grad_ptr, __pyx_k_accu_grad_ptr, sizeof(__pyx_k_accu_grad_ptr), 0, 0, 1, 1},
   {&__pyx_n_s_accu_sq_grad, __pyx_k_accu_sq_grad, sizeof(__pyx_k_accu_sq_grad), 0, 0, 1, 1},
@@ -6709,13 +6687,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 297; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 296; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #if PY_MAJOR_VERSION >= 3
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 358; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #else
-  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 359; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_xrange = __Pyx_GetBuiltinName(__pyx_n_s_xrange); if (!__pyx_builtin_xrange) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 358; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   #endif
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 363; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 362; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 799; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   return 0;
   __pyx_L1_error:;
@@ -6799,34 +6777,34 @@ static int __Pyx_InitCachedConstants(void) {
  *               double intercept,
  *               LossFunction loss,
  */
-  __pyx_tuple__8 = PyTuple_Pack(23, __pyx_n_s_weights, __pyx_n_s_intercept, __pyx_n_s_loss, __pyx_n_s_penalty_type, __pyx_n_s_alpha, __pyx_n_s_C, __pyx_n_s_l1_ratio, __pyx_n_s_dataset, __pyx_n_s_n_iter, __pyx_n_s_fit_intercept, __pyx_n_s_verbose, __pyx_n_s_shuffle, __pyx_n_s_seed, __pyx_n_s_weight_pos, __pyx_n_s_weight_neg, __pyx_n_s_learning_rate, __pyx_n_s_eta0, __pyx_n_s_power_t, __pyx_n_s_t, __pyx_n_s_intercept_decay, __pyx_n_s_standard_weights, __pyx_n_s_standard_intercept, __pyx_n_s__7); if (unlikely(!__pyx_tuple__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__8);
-  __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(20, 0, 23, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_n_s_plain_sgd_2, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__7 = PyTuple_Pack(22, __pyx_n_s_weights, __pyx_n_s_intercept, __pyx_n_s_loss, __pyx_n_s_penalty_type, __pyx_n_s_alpha, __pyx_n_s_C, __pyx_n_s_l1_ratio, __pyx_n_s_dataset, __pyx_n_s_n_iter, __pyx_n_s_fit_intercept, __pyx_n_s_verbose, __pyx_n_s_shuffle, __pyx_n_s_seed, __pyx_n_s_weight_pos, __pyx_n_s_weight_neg, __pyx_n_s_learning_rate, __pyx_n_s_eta0, __pyx_n_s_power_t, __pyx_n_s_t, __pyx_n_s_intercept_decay, __pyx_n_s_standard_weights, __pyx_n_s_standard_intercept); if (unlikely(!__pyx_tuple__7)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__7);
+  __Pyx_GIVEREF(__pyx_tuple__7);
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(20, 0, 22, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_n_s_plain_sgd_2, 42, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":135
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":134
  * 
  * 
  * def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
  *                 double intercept,
  *                 np.ndarray[double, ndim=1, mode='c'] average_weights,
  */
-  __pyx_tuple__10 = PyTuple_Pack(23, __pyx_n_s_weights, __pyx_n_s_intercept, __pyx_n_s_average_weights, __pyx_n_s_average_intercept, __pyx_n_s_loss, __pyx_n_s_penalty_type, __pyx_n_s_alpha, __pyx_n_s_C, __pyx_n_s_l1_ratio, __pyx_n_s_dataset, __pyx_n_s_n_iter, __pyx_n_s_fit_intercept, __pyx_n_s_verbose, __pyx_n_s_shuffle, __pyx_n_s_seed, __pyx_n_s_weight_pos, __pyx_n_s_weight_neg, __pyx_n_s_learning_rate, __pyx_n_s_eta0, __pyx_n_s_power_t, __pyx_n_s_t, __pyx_n_s_intercept_decay, __pyx_n_s_average); if (unlikely(!__pyx_tuple__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__10);
-  __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(23, 0, 23, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_n_s_average_sgd, 135, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__9 = PyTuple_Pack(23, __pyx_n_s_weights, __pyx_n_s_intercept, __pyx_n_s_average_weights, __pyx_n_s_average_intercept, __pyx_n_s_loss, __pyx_n_s_penalty_type, __pyx_n_s_alpha, __pyx_n_s_C, __pyx_n_s_l1_ratio, __pyx_n_s_dataset, __pyx_n_s_n_iter, __pyx_n_s_fit_intercept, __pyx_n_s_verbose, __pyx_n_s_shuffle, __pyx_n_s_seed, __pyx_n_s_weight_pos, __pyx_n_s_weight_neg, __pyx_n_s_learning_rate, __pyx_n_s_eta0, __pyx_n_s_power_t, __pyx_n_s_t, __pyx_n_s_intercept_decay, __pyx_n_s_average); if (unlikely(!__pyx_tuple__9)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__9);
+  __Pyx_GIVEREF(__pyx_tuple__9);
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(23, 0, 23, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_n_s_average_sgd, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":240
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":239
  * 
  * 
  * def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
  *                double intercept,
  *                np.ndarray[double, ndim=1, mode='c'] average_weights,
  */
-  __pyx_tuple__12 = PyTuple_Pack(53, __pyx_n_s_weights, __pyx_n_s_intercept, __pyx_n_s_average_weights, __pyx_n_s_average_intercept, __pyx_n_s_loss, __pyx_n_s_penalty_type, __pyx_n_s_alpha, __pyx_n_s_C, __pyx_n_s_l1_ratio, __pyx_n_s_dataset, __pyx_n_s_n_iter, __pyx_n_s_fit_intercept, __pyx_n_s_verbose, __pyx_n_s_shuffle, __pyx_n_s_seed, __pyx_n_s_weight_pos, __pyx_n_s_weight_neg, __pyx_n_s_learning_rate, __pyx_n_s_eta0, __pyx_n_s_power_t, __pyx_n_s_t, __pyx_n_s_intercept_decay, __pyx_n_s_average, __pyx_n_s_n_samples, __pyx_n_s_n_features, __pyx_n_s_w_ptr, __pyx_n_s_x_data_ptr, __pyx_n_s_x_ind_ptr, __pyx_n_s_ps_ptr, __pyx_n_s_infinity, __pyx_n_s_xnnz, __pyx_n_s_eta, __pyx_n_s_p, __pyx_n_s_sumloss, __pyx_n_s_y, __pyx_n_s_sample_weight, __pyx_n_s_class_weight, __pyx_n_s_count, __pyx_n_s_epoch, __pyx_n_s_i, __pyx_n_s_is_hinge, __pyx_n_s_optimal_init, __pyx_n_s_dloss, __pyx_n_s_MAX_DLOSS, __pyx_n_s_accu_grad, __pyx_n_s_accu_grad_ptr, __pyx_n_s_accu_sq_grad, __pyx_n_s_accu_sq_grad_ptr, __pyx_n_s_t_start, __pyx_n_s_j, __pyx_n_s_idx, __pyx_n_s_val, __pyx_n_s_grad); if (unlikely(!__pyx_tuple__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-  __Pyx_GOTREF(__pyx_tuple__12);
-  __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(23, 0, 53, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_n_s_plain_sgd, 240, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_tuple__11 = PyTuple_Pack(53, __pyx_n_s_weights, __pyx_n_s_intercept, __pyx_n_s_average_weights, __pyx_n_s_average_intercept, __pyx_n_s_loss, __pyx_n_s_penalty_type, __pyx_n_s_alpha, __pyx_n_s_C, __pyx_n_s_l1_ratio, __pyx_n_s_dataset, __pyx_n_s_n_iter, __pyx_n_s_fit_intercept, __pyx_n_s_verbose, __pyx_n_s_shuffle, __pyx_n_s_seed, __pyx_n_s_weight_pos, __pyx_n_s_weight_neg, __pyx_n_s_learning_rate, __pyx_n_s_eta0, __pyx_n_s_power_t, __pyx_n_s_t, __pyx_n_s_intercept_decay, __pyx_n_s_average, __pyx_n_s_n_samples, __pyx_n_s_n_features, __pyx_n_s_w_ptr, __pyx_n_s_x_data_ptr, __pyx_n_s_x_ind_ptr, __pyx_n_s_ps_ptr, __pyx_n_s_infinity, __pyx_n_s_xnnz, __pyx_n_s_eta, __pyx_n_s_p, __pyx_n_s_sumloss, __pyx_n_s_y, __pyx_n_s_sample_weight, __pyx_n_s_class_weight, __pyx_n_s_count, __pyx_n_s_epoch, __pyx_n_s_i, __pyx_n_s_is_hinge, __pyx_n_s_optimal_init, __pyx_n_s_dloss, __pyx_n_s_MAX_DLOSS, __pyx_n_s_accu_grad, __pyx_n_s_accu_grad_ptr, __pyx_n_s_accu_sq_grad, __pyx_n_s_accu_sq_grad_ptr, __pyx_n_s_t_start, __pyx_n_s_j, __pyx_n_s_idx, __pyx_n_s_val, __pyx_n_s_grad); if (unlikely(!__pyx_tuple__11)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __Pyx_GOTREF(__pyx_tuple__11);
+  __Pyx_GIVEREF(__pyx_tuple__11);
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(23, 0, 53, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Users_dannysullivan_Documents_C, __pyx_n_s_plain_sgd, 239, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -7020,28 +6998,28 @@ PyMODINIT_FUNC PyInit_sgd_fast_adaptive(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plain_sgd_2, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 42; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":135
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":134
  * 
  * 
  * def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
  *                 double intercept,
  *                 np.ndarray[double, ndim=1, mode='c'] average_weights,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7sklearn_12linear_model_17sgd_fast_adaptive_3average_sgd, NULL, __pyx_n_s_sklearn_linear_model_sgd_fast_ad); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7sklearn_12linear_model_17sgd_fast_adaptive_3average_sgd, NULL, __pyx_n_s_sklearn_linear_model_sgd_fast_ad); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_average_sgd, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 135; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_average_sgd, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 134; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":240
+  /* "sklearn/linear_model/sgd_fast_adaptive.pyx":239
  * 
  * 
  * def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,             # <<<<<<<<<<<<<<
  *                double intercept,
  *                np.ndarray[double, ndim=1, mode='c'] average_weights,
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7sklearn_12linear_model_17sgd_fast_adaptive_5_plain_sgd, NULL, __pyx_n_s_sklearn_linear_model_sgd_fast_ad); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_7sklearn_12linear_model_17sgd_fast_adaptive_5_plain_sgd, NULL, __pyx_n_s_sklearn_linear_model_sgd_fast_ad); if (unlikely(!__pyx_t_2)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_plain_sgd, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 240; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_plain_sgd, __pyx_t_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 239; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "sklearn/linear_model/sgd_fast_adaptive.pyx":1

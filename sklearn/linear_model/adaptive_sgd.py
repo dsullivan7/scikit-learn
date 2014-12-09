@@ -32,7 +32,7 @@ class BaseAdaptiveSGD(BaseSGD):
             warm_start=warm_start,
             average=average)
 
-    def _partial_fit(self, X, y, coef_init, intercept_init, average_coef_init,
+    def _proxy_partial_fit(self, X, y, coef_init, intercept_init, average_coef_init,
                      average_intercept_init, loss, learning_rate, n_iter,
                      pos_weight, neg_weight, sample_weight):
         """Fit a X and y"""
@@ -86,25 +86,25 @@ class BaseAdaptiveSGD(BaseSGD):
             intercepts["standard"] = standard_intercept
             coefs["standard"] = standard_coef
 
-        else:
-            standard_coef, standard_intercept, average_coef, \
-                average_intercept = \
-                average_sgd(coef_init, intercept_init, average_coef_init,
-                            average_intercept_init,
-                            loss_function, penalty_type,
-                            self.alpha, self.C, self.l1_ratio, dataset,
-                            n_iter, int(self.fit_intercept),
-                            int(self.verbose), int(self.shuffle),
-                            seed, pos_weight, neg_weight,
-                            learning_rate_type, self.eta0,
-                            self.power_t, self.t_,
-                            intercept_decay,
-                            self.average)
+        # else:
+        #     standard_coef, standard_intercept, average_coef, \
+        #         average_intercept = \
+        #         average_sgd(coef_init, intercept_init, average_coef_init,
+        #                     average_intercept_init,
+        #                     loss_function, penalty_type,
+        #                     self.alpha, self.C, self.l1_ratio, dataset,
+        #                     n_iter, int(self.fit_intercept),
+        #                     int(self.verbose), int(self.shuffle),
+        #                     seed, pos_weight, neg_weight,
+        #                     learning_rate_type, self.eta0,
+        #                     self.power_t, self.t_,
+        #                     intercept_decay,
+        #                     self.average)
 
-            intercepts["standard"] = standard_intercept
-            coefs["standard"] = standard_coef
-            intercepts["average"] = average_intercept
-            coefs["average"] = average_coef
+        #     intercepts["standard"] = standard_intercept
+        #     coefs["standard"] = standard_coef
+        #     intercepts["average"] = average_intercept
+        #     coefs["average"] = average_coef
 
         return coefs, intercepts
 

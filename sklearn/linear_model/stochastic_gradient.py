@@ -217,9 +217,19 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
                                                dtype=np.float64,
                                                order="C")
 
-    def _partial_fit(self, X, y, coef_init, intercept_init, average_coef_init,
-                     average_intercept_init, loss, learning_rate, n_iter,
-                     pos_weight, neg_weight, sample_weight):
+    def _base_partial_fit(self, X, y, coef_init, intercept_init,
+                          average_coef_init, average_intercept_init,
+                          loss, learning_rate, n_iter,
+                          pos_weight, neg_weight, sample_weight):
+        return self._proxy_partial_fit(X, y, coef_init, intercept_init,
+                          average_coef_init, average_intercept_init,
+                          loss, learning_rate, n_iter,
+                          pos_weight, neg_weight, sample_weight)
+
+    def _proxy_partial_fit(self, X, y, coef_init, intercept_init,
+                          average_coef_init, average_intercept_init,
+                          loss, learning_rate, n_iter,
+                          pos_weight, neg_weight, sample_weight):
         """Fit a X and y"""
         n_samples, n_features = X.shape
 
@@ -475,13 +485,13 @@ class BaseSGDClassifier(six.with_metaclass(ABCMeta, BaseSGD,
                 average_intercept_init = None
 
         return super(BaseSGDClassifier,
-                     self)._partial_fit(X, y_encoded, coef_init,
-                                        intercept_init, average_coef_init,
-                                        average_intercept_init,
-                                        loss, learning_rate, n_iter,
-                                        pos_weight,
-                                        neg_weight,
-                                        sample_weight)
+                     self)._base_partial_fit(X, y_encoded, coef_init,
+                                             intercept_init, average_coef_init,
+                                             average_intercept_init,
+                                             loss, learning_rate, n_iter,
+                                             pos_weight,
+                                             neg_weight,
+                                             sample_weight)
 
     def _fit_multiclass(self, X, y, loss, learning_rate, n_iter,
                         sample_weight):
@@ -931,14 +941,14 @@ class BaseSGDRegressor(BaseSGD, RegressorMixin):
             average_coef_init = None
             average_intercept_init = None
 
-        coefs, intercepts = super(BaseSGDRegressor,
-                                  self)._partial_fit(X, y, coef_init,
-                                                     intercept_init,
-                                                     average_coef_init,
-                                                     average_intercept_init,
-                                                     loss, learning_rate,
-                                                     n_iter, 1.0, 1.0,
-                                                     sample_weight)
+        coefs, intercepts = super(BaseSGDRegressor, self).\
+            _base_partial_fit(X, y, coef_init,
+                              intercept_init,
+                              average_coef_init,
+                              average_intercept_init,
+                              loss, learning_rate,
+                              n_iter, 1.0, 1.0,
+                              sample_weight)
         if not self.average > 0:
             self.coef_ = coefs["standard"]
             self.intercept_ = np.atleast_1d(intercepts["standard"])

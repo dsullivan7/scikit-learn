@@ -111,8 +111,7 @@ def plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
     intercept : float
         The fitted intercept term.
     """
-    standard_weights, standard_intercept,\
-        _, _ = _plain_sgd(weights,
+    standard_weights, standard_intercept = _plain_sgd(weights,
                           intercept,
                           None,
                           0,
