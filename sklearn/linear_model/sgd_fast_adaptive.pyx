@@ -52,6 +52,7 @@ def plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
               int learning_rate, double eta0,
               double power_t,
               double t=0.0,
+              double eps0,
               double intercept_decay=1.0):
     """Plain SGD for generic loss functions and penalties.
 
@@ -127,6 +128,7 @@ def plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                           power_t,
                           t,
                           intercept_decay,
+                          eps0,
                           0)
     return standard_weights, standard_intercept
 
@@ -147,6 +149,7 @@ def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                 double power_t,
                 double t=0.0,
                 double intercept_decay=1.0,
+                double eps0,
                 int average=1):
     """Average SGD for generic loss functions and penalties.
 
@@ -233,6 +236,7 @@ def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                       power_t,
                       t,
                       intercept_decay,
+                      eps0,
                       average)
 
 
@@ -252,6 +256,7 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                double power_t,
                double t=0.0,
                double intercept_decay=1.0,
+               double eps0,
                int average=0):
 
     # get the data information into easy vars
@@ -356,7 +361,8 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                 break
 
     for j in xrange(n_features):
-        update_weights(j, eta0, alpha, t, w_ptr, accu_grad_ptr, accu_sq_grad_ptr)
+        update_weights(j, eta0, eps0, alpha, t, w_ptr,
+                       accu_grad_ptr, accu_sq_grad_ptr)
 
     if infinity:
         raise ValueError(("Floating-point under-/overflow occurred at epoch"
@@ -366,12 +372,12 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
 
     return weights, intercept
 
-cdef void update_weights(int idx, double eta, double alpha, double t,
-                         double* w_ptr, double* accu_grad_ptr,
+cdef void update_weights(int idx, double eta, double eps0, double alpha,
+                         double t, double* w_ptr, double* accu_grad_ptr,
                          double* accu_sq_grad_ptr) nogil:
     eta_t = eta * t
     # TODO: include delta
-    denom = sqrt(accu_sq_grad_ptr[idx]) + eta_t * alpha
+    denom = sqrt(accu_sq_grad_ptr[idx] + eps0) + eta_t * alpha
     w_ptr[idx] = -eta * accu_grad_ptr[idx] / denom
 
 cdef bint any_nonfinite(double *w, int n) nogil:

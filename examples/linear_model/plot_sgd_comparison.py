@@ -16,6 +16,7 @@ from sklearn import datasets
 
 from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import SGDClassifier, Perceptron
+from sklearn.linear_model import AdaptiveSGDClassifier
 from sklearn.linear_model import PassiveAggressiveClassifier
 
 heldout = [0.95, 0.90, 0.75, 0.50, 0.01]
@@ -25,6 +26,7 @@ X, y = digits.data, digits.target
 
 classifiers = [
     ("SGD", SGDClassifier()),
+    ("AdaptiveSGDClassifier", AdaptiveSGDClassifier(loss="hinge")),
     ("ASGD", SGDClassifier(average=True)),
     ("Perceptron", Perceptron()),
     ("Passive-Aggressive I", PassiveAggressiveClassifier(loss='hinge',

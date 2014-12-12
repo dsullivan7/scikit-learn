@@ -55,6 +55,8 @@ def multiprocess_method(instance, name, args=()):
 class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
     """Base class for SGD classification and regression."""
 
+    fit_method = {"standard": plain_sgd, "average": average_sgd}
+
     def __init__(self, loss, penalty='l2', alpha=0.0001, C=1.0,
                  l1_ratio=0.15, fit_intercept=True, n_iter=5, shuffle=False,
                  verbose=0, epsilon=0.1, random_state=None,
@@ -221,15 +223,6 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
                           average_coef_init, average_intercept_init,
                           loss, learning_rate, n_iter,
                           pos_weight, neg_weight, sample_weight):
-        return self._proxy_partial_fit(X, y, coef_init, intercept_init,
-                          average_coef_init, average_intercept_init,
-                          loss, learning_rate, n_iter,
-                          pos_weight, neg_weight, sample_weight)
-
-    def _proxy_partial_fit(self, X, y, coef_init, intercept_init,
-                          average_coef_init, average_intercept_init,
-                          loss, learning_rate, n_iter,
-                          pos_weight, neg_weight, sample_weight):
         """Fit a X and y"""
         n_samples, n_features = X.shape
 
@@ -246,7 +239,9 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
             if intercept_init is None:
                 intercept_init = 0.0
             if average_coef_init is None:
-                coef_init = np.zeros(n_features, dtype=np.float64, order="C")
+                average_coef_init = np.zeros(n_features,
+                                             dtype=np.float64,
+                                             order="C")
             if intercept_init is None:
                 average_intercept_init = 0.0
 
@@ -266,17 +261,38 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
         # Windows
         seed = random_state.randint(0, np.iinfo(np.int32).max)
 
+        return self._fit_method(coef_init, intercept_init, average_coef_init,
+                                average_intercept_init, loss_function,
+                                penalty_type, self.alpha, self.C,
+                                self.l1_ratio, dataset, n_iter,
+                                int(self.fit_intercept), int(self.verbose),
+                                int(self.shuffle), seed,
+                                pos_weight, neg_weight,
+                                learning_rate_type, self.eta0,
+                                self.power_t, self.t_, intercept_decay,
+                                self.average)
+
+    def _fit_method(self, coef_init, intercept_init, average_coef_init,
+                    average_intercept_init, loss_function,
+                    penalty_type, alpha, C, l1_ratio,
+                    dataset, n_iter, fit_intercept,
+                    verbose, shuffle, seed,
+                    pos_weight, neg_weight,
+                    learning_rate_type, eta0,
+                    power_t, t_, intercept_decay, average):
+
         intercepts = {}
         coefs = {}
         if not self.average > 0:
             standard_coef, standard_intercept = \
-                plain_sgd(coef_init, intercept_init, loss_function,
-                          penalty_type, self.alpha, self.C, self.l1_ratio,
-                          dataset, n_iter, int(self.fit_intercept),
-                          int(self.verbose), int(self.shuffle), seed,
-                          pos_weight, neg_weight,
-                          learning_rate_type, self.eta0,
-                          self.power_t, self.t_, intercept_decay)
+                plain_sgd(
+                    coef_init, intercept_init, loss_function,
+                    penalty_type, alpha, C, l1_ratio,
+                    dataset, n_iter, fit_intercept,
+                    verbose, shuffle, seed,
+                    pos_weight, neg_weight,
+                    learning_rate_type, eta0,
+                    power_t, t_, intercept_decay)
 
             intercepts["standard"] = standard_intercept
             coefs["standard"] = standard_coef
@@ -284,17 +300,18 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
         else:
             standard_coef, standard_intercept, average_coef, \
                 average_intercept = \
-                average_sgd(coef_init, intercept_init, average_coef_init,
-                            average_intercept_init,
-                            loss_function, penalty_type,
-                            self.alpha, self.C, self.l1_ratio, dataset,
-                            n_iter, int(self.fit_intercept),
-                            int(self.verbose), int(self.shuffle),
-                            seed, pos_weight, neg_weight,
-                            learning_rate_type, self.eta0,
-                            self.power_t, self.t_,
-                            intercept_decay,
-                            self.average)
+                average_sgd(
+                    coef_init, intercept_init, average_coef_init,
+                    average_intercept_init,
+                    loss_function, penalty_type,
+                    alpha, C, l1_ratio, dataset,
+                    n_iter, fit_intercept,
+                    verbose, shuffle,
+                    seed, pos_weight, neg_weight,
+                    learning_rate_type, eta0,
+                    power_t, t_,
+                    intercept_decay,
+                    average)
 
             intercepts["standard"] = standard_intercept
             coefs["standard"] = standard_coef
