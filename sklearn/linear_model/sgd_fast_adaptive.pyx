@@ -51,8 +51,8 @@ def plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
               double weight_pos, double weight_neg,
               int learning_rate, double eta0,
               double power_t,
-              double t=0.0,
-              double eps0,
+              double counter=1.0,
+              double eps0=0.1,
               double intercept_decay=1.0):
     """Plain SGD for generic loss functions and penalties.
 
@@ -98,9 +98,11 @@ def plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
         (5) Passive Agressive-II, eta = 1.0 / (norm(x) + 0.5*alpha)
     eta0 : double
         The initial learning rate.
+    eps0 : double
+        The regret for the adaptive learning rate
     power_t : double
         The exponent for inverse scaling learning rate.
-    t : double
+    counter : double
         Initial state of the learning rate. This value is equal to the
         iteration count except when the learning rate is set to `optimal`.
         Default: 1.0.
@@ -126,7 +128,7 @@ def plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                           weight_pos, weight_neg,
                           learning_rate, eta0,
                           power_t,
-                          t,
+                          counter,
                           intercept_decay,
                           eps0,
                           0)
@@ -147,9 +149,9 @@ def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                 double weight_pos, double weight_neg,
                 int learning_rate, double eta0,
                 double power_t,
-                double t=0.0,
+                double counter=1.0,
                 double intercept_decay=1.0,
-                double eps0,
+                double eps0=0.1,
                 int average=1):
     """Average SGD for generic loss functions and penalties.
 
@@ -199,9 +201,11 @@ def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
         (5) Passive Agressive-II, eta = 1.0 / (norm(x) + 0.5*alpha)
     eta0 : double
         The initial learning rate.
+    eps0 : double
+        The regret for the adaptive learning rate
     power_t : double
         The exponent for inverse scaling learning rate.
-    t : double
+    counter : double
         Initial state of the learning rate. This value is equal to the
         iteration count except when the learning rate is set to `optimal`.
         Default: 1.0.
@@ -234,7 +238,7 @@ def average_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                       weight_pos, weight_neg,
                       learning_rate, eta0,
                       power_t,
-                      t,
+                      counter,
                       intercept_decay,
                       eps0,
                       average)
@@ -254,9 +258,9 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                double weight_pos, double weight_neg,
                int learning_rate, double eta0,
                double power_t,
-               double t=0.0,
+               double counter=1.0,
                double intercept_decay=1.0,
-               double eps0,
+               double eps0=0.1,
                int average=0):
 
     # get the data information into easy vars
@@ -295,7 +299,6 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
         np.zeros((n_features,), dtype=np.float64, order="c")
     cdef double* accu_sq_grad_ptr = <double*> accu_sq_grad.data
 
-
     t_start = time()
     with nogil:
         for epoch in range(n_iter):
@@ -311,20 +314,22 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                              &y,
                              &sample_weight)
 
-                if t >= 1.0:
+                if counter > 1.0:
                     for j in range(xnnz):
                         idx = x_ind_ptr[j]
-                        update_weights(idx, eta0, alpha, t, w_ptr,
+                        update_weights(idx, eta0, eps0, alpha, counter, w_ptr,
                                        accu_grad_ptr, accu_sq_grad_ptr)
 
-                p = dot(w_ptr, x_data_ptr, x_ind_ptr, xnnz) + intercept
+
 
                 if verbose > 0:
                     sumloss += loss.loss(p, y)
 
                 class_weight = weight_pos if y > 0.0 else weight_neg
 
+                p = dot(w_ptr, x_data_ptr, x_ind_ptr, xnnz)
                 dloss = loss._dloss(p, y)
+
                 # clip dloss with large values to avoid numerical
                 # instabilities
                 if dloss < -MAX_DLOSS:
@@ -340,7 +345,7 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                         accu_grad[idx] += grad
                         accu_sq_grad[idx] += grad * grad
 
-                t += 1
+                counter += 1
                 count += 1
 
             # report epoch information
@@ -361,7 +366,7 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
                 break
 
     for j in xrange(n_features):
-        update_weights(j, eta0, eps0, alpha, t, w_ptr,
+        update_weights(j, eta0, eps0, alpha, counter, w_ptr,
                        accu_grad_ptr, accu_sq_grad_ptr)
 
     if infinity:
@@ -373,10 +378,9 @@ def _plain_sgd(np.ndarray[double, ndim=1, mode='c'] weights,
     return weights, intercept
 
 cdef void update_weights(int idx, double eta, double eps0, double alpha,
-                         double t, double* w_ptr, double* accu_grad_ptr,
+                         double counter, double* w_ptr, double* accu_grad_ptr,
                          double* accu_sq_grad_ptr) nogil:
-    eta_t = eta * t
-    # TODO: include delta
+    eta_t = eta * (counter - 1)
     denom = sqrt(accu_sq_grad_ptr[idx] + eps0) + eta_t * alpha
     w_ptr[idx] = -eta * accu_grad_ptr[idx] / denom
 

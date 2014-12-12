@@ -55,8 +55,6 @@ def multiprocess_method(instance, name, args=()):
 class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
     """Base class for SGD classification and regression."""
 
-    fit_method = {"standard": plain_sgd, "average": average_sgd}
-
     def __init__(self, loss, penalty='l2', alpha=0.0001, C=1.0,
                  l1_ratio=0.15, fit_intercept=True, n_iter=5, shuffle=False,
                  verbose=0, epsilon=0.1, random_state=None,
@@ -263,36 +261,31 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
 
         return self._fit_method(coef_init, intercept_init, average_coef_init,
                                 average_intercept_init, loss_function,
-                                penalty_type, self.alpha, self.C,
-                                self.l1_ratio, dataset, n_iter,
-                                int(self.fit_intercept), int(self.verbose),
-                                int(self.shuffle), seed,
-                                pos_weight, neg_weight,
-                                learning_rate_type, self.eta0,
-                                self.power_t, self.t_, intercept_decay,
-                                self.average)
+                                penalty_type, dataset, n_iter,
+                                seed, pos_weight, neg_weight,
+                                learning_rate_type, intercept_decay)
 
     def _fit_method(self, coef_init, intercept_init, average_coef_init,
                     average_intercept_init, loss_function,
-                    penalty_type, alpha, C, l1_ratio,
-                    dataset, n_iter, fit_intercept,
-                    verbose, shuffle, seed,
+                    penalty_type,
+                    dataset, n_iter, seed,
                     pos_weight, neg_weight,
-                    learning_rate_type, eta0,
-                    power_t, t_, intercept_decay, average):
+                    learning_rate_type, intercept_decay):
 
         intercepts = {}
         coefs = {}
         if not self.average > 0:
             standard_coef, standard_intercept = \
                 plain_sgd(
-                    coef_init, intercept_init, loss_function,
-                    penalty_type, alpha, C, l1_ratio,
-                    dataset, n_iter, fit_intercept,
-                    verbose, shuffle, seed,
+                    coef_init, intercept_init,
+                    loss_function,
+                    penalty_type, self.alpha, self.C,
+                    self.l1_ratio, dataset, n_iter,
+                    int(self.fit_intercept), int(self.verbose),
+                    int(self.shuffle), seed,
                     pos_weight, neg_weight,
-                    learning_rate_type, eta0,
-                    power_t, t_, intercept_decay)
+                    learning_rate_type, self.eta0,
+                    self.power_t, self.t_, intercept_decay)
 
             intercepts["standard"] = standard_intercept
             coefs["standard"] = standard_coef
@@ -302,16 +295,15 @@ class BaseSGD(six.with_metaclass(ABCMeta, BaseEstimator, SparseCoefMixin)):
                 average_intercept = \
                 average_sgd(
                     coef_init, intercept_init, average_coef_init,
-                    average_intercept_init,
-                    loss_function, penalty_type,
-                    alpha, C, l1_ratio, dataset,
-                    n_iter, fit_intercept,
-                    verbose, shuffle,
-                    seed, pos_weight, neg_weight,
-                    learning_rate_type, eta0,
-                    power_t, t_,
-                    intercept_decay,
-                    average)
+                    average_intercept_init, loss_function,
+                    penalty_type, self.alpha, self.C,
+                    self.l1_ratio, dataset, n_iter,
+                    int(self.fit_intercept), int(self.verbose),
+                    int(self.shuffle), seed,
+                    pos_weight, neg_weight,
+                    learning_rate_type, self.eta0,
+                    self.power_t, self.t_, intercept_decay,
+                    self.average)
 
             intercepts["standard"] = standard_intercept
             coefs["standard"] = standard_coef
