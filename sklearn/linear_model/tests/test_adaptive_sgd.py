@@ -15,7 +15,7 @@ def log_dloss(p, y):
     return -y / (math.exp(z) + 1.0)
 
 
-def sparse_sgd(X, y, eta, alpha, n_iter=5):
+def sparse_sgd(X, y, eta, alpha, n_iter=5, dloss=log_dloss):
     n_shape, n_features = X.shape
     weights = np.zeros(X.shape[1])
     accu_gradient = np.zeros(X.shape[1])
@@ -31,11 +31,13 @@ def sparse_sgd(X, y, eta, alpha, n_iter=5):
                     weights[idx] = -eta * accu_gradient[idx] / denom
 
             p = np.dot(entry, weights)
-            scalar_gradient = log_dloss(p, y[i])
+            scalar_gradient = dloss(p, y[i])
             gradient_vector = scalar_gradient * entry
 
             accu_gradient += gradient_vector
             accu_sq_gradient += gradient_vector * gradient_vector
+
+            counter += 1
 
     eta_t = eta * counter
     for idx in range(n_features):
@@ -45,10 +47,16 @@ def sparse_sgd(X, y, eta, alpha, n_iter=5):
 
 
 def test_computed_correctly():
-    X = np.random.random((5, 4))
-    y = np.random.random(5)
-    clf = AdaptiveSGDRegressor(eta0=1.0, alpha=1.0, n_iter=1, loss="log")
-    clf.fit(X, y)
-    w = sparse_sgd(X, y, 1.0, 1.0, n_iter=1)
+    n_samples, n_features = 100, 20
+    eta = .01
+    alpha = .001
+    n_iter = 10
+    X = np.random.random((n_samples, n_features))
+    y = np.random.random(n_samples)
 
-    assert_array_almost_equal(w, clf.coef_)
+    clf = AdaptiveSGDRegressor(eta0=eta, alpha=alpha,
+                               n_iter=n_iter, loss="log")
+    clf.fit(X, y)
+    w = sparse_sgd(X, y, eta, alpha, n_iter=n_iter, dloss=log_dloss)
+
+    assert_array_almost_equal(w, clf.coef_, decimal=16)
