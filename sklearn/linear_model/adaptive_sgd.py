@@ -5,7 +5,7 @@ from abc import ABCMeta
 from .base import LinearClassifierMixin
 from ..base import RegressorMixin
 from ..feature_selection.from_model import _LearntSelectorMixin
-from .sgd_fast_adaptive import plain_sgd, average_sgd
+from .adaptive_sgd_fast import plain_sgd, average_sgd
 from .stochastic_gradient import BaseSGD, BaseSGDRegressor, BaseSGDClassifier
 from ..utils import check_random_state
 from ..externals import six

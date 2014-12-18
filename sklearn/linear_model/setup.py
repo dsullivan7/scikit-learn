@@ -34,8 +34,8 @@ def configuration(parent_package='', top_path=None):
                                                           []),
                          **blas_info)
 
-    config.add_extension('sgd_fast_adaptive',
-                         sources=['sgd_fast_adaptive.c'],
+    config.add_extension('adaptive_sgd_fast',
+                         sources=['adaptive_sgd_fast.c'],
                          include_dirs=[join('..', 'src', 'cblas'),
                                        numpy.get_include(),
                                        blas_info.pop('include_dirs', [])],
